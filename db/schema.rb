@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_04_175805) do
+ActiveRecord::Schema.define(version: 2019_04_05_175154) do
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.bigint "masters_id"
+    t.index ["masters_id"], name: "index_categories_on_masters_id"
+  end
+
+  create_table "masters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_masters_on_category_id"
+  end
+
+  create_table "offers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.float "price"
+    t.time "duration"
+    t.string "name"
+    t.string "description"
+    t.bigint "master_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_offers_on_category_id"
+    t.index ["master_id"], name: "index_offers_on_master_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,9 +43,20 @@ ActiveRecord::Schema.define(version: 2019_04_04_175805) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "role", default: "manager"
+    t.string "name"
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "working_hours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "masters_id"
+    t.integer "day_of_week"
+    t.time "open"
+    t.time "close"
+    t.index ["masters_id"], name: "index_working_hours_on_masters_id"
+  end
+
+  add_foreign_key "offers", "categories"
+  add_foreign_key "offers", "masters"
 end
