@@ -9,8 +9,14 @@ gem 'rails', '~> 5.2.3'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
-gem 'bootstrap'
+gem 'rails-i18n', '~> 5.1'
+# Use SCSS for
+gem 'react-rails'
+gem 'webpacker'
+gem 'slim', '~> 4.0', '>= 4.0.1'
+gem 'slim-rails'
+gem 'html2slim', '~> 0.2.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'devise'

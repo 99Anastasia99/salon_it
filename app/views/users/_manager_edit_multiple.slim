@@ -1,0 +1,13 @@
+#results
+table.table.table-striped.table-bordered.table-list
+  tr
+    th align="center" = check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
+    th= "name"
+    th= "e-mail"
+    th= "Action"
+  - User.where(admin: false).each do |user|
+    tr
+      td align="center" = check_box_tag "user_ids[]", user.id
+      td= link_to "#{user.name}", user_path(user)
+      td= user.email
+      td= link_to   t('common.destroy'), user, class:"dropdown-item align-middle" , method: :delete, data: { confirm: 'Are you sure?' }

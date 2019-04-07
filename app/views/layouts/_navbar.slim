@@ -1,0 +1,30 @@
+body
+  .background-text
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      = link_to "Lections Sharing", root_path, class: "navbar-brand"
+      button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" type="button"
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            = link_to "#{current_user.name}", current_user, class: "nav-link" if current_user
+          - if current_user && current_user.admin == true
+            li.nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" role="button"
+                = t('common.admin')
+              .dropdown-menu aria-labelledby="navbarDropdown"
+                = link_to t('common.show_all_managers'), users_path(@user), class: "dropdown-item"
+          li.nav-item
+            a.nav-link.disabled href="#"  Disabled
+          .form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2 aria-label="Search" placeholder="Search" type="search" /
+            button.btn.btn-outline-success.my-2.my-sm-0 type="submit"  Search
+        div style=("margin: 5px")
+          = link_to "Ru", { :locale => :ru } , class: "btn btn-outline-light btn-sm"
+          = link_to "En", { :locale => :en }, class: "btn btn-outline-light btn-sm"
+          = link_to "Be", {:locale => :be }, class: "btn btn-outline-light btn-sm"
+          - if !current_user
+            = link_to t('common.sign_in'), new_user_session_path , class: "btn btn-outline-info btn-sm",style: "margin:5px"
+          - else
+            = link_to t('common.sign_out'), destroy_user_session_path,class: 'btn btn-outline-info btn-sm', method: :delete
+            = link_to t('common.sign_up_by_owner'), new_user_path ,class: "btn btn-outline-primary btn-sm" if current_user.admin?

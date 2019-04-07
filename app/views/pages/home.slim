@@ -1,0 +1,5 @@
+.container
+    - if current_user.admin?
+      - User.where(admin: false).each do |user|
+        = user.name
+        = user. email
