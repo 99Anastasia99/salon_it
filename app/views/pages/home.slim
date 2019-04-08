@@ -1,6 +1,7 @@
 .container
   .row
     .col-md-8
+      =link_to 'destroy', destroy_all_path(@user)
       - if current_user and current_user.admin?
         - User.where(admin: false).each do |user|
           = user.name

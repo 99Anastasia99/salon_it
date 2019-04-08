@@ -22071,3 +22071,2000 @@ Processing by CategoriesController#update as JSON
 Completed 204 No Content in 29ms (ActiveRecord: 5.0ms)
 
 
+Started GET "/categories/6" for ::1 at 2019-04-08 22:59:01 +0300
+  [1m[35m (6.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/Mac/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (37.4ms)
+  [1m[36mMaster Load (2.3ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  [1m[36mOffer Load (0.6ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Offer Load (0.0ms)[0m  [1m[34mSELECT  `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6 LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered categories/_masters_results.slim (2227.9ms)
+  Rendered categories/show.slim within layouts/application (2349.3ms)
+Completed 500 Internal Server Error in 2607ms (ActiveRecord: 74.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `common' for #<#<Class:0x00007f831e6e3400>:0x00007f831e6daf80>):
+     5:       th= "Имя"
+     6:       th= "Категория"
+     7:       th= "Рабочее время"
+     8:       th= link_to t(common.add_new_master), new_master_path, class: "btn btn-info"
+     9:     - @masters.each do |master|
+    10:       tr
+    11:         td align="center" = check_box_tag "master_ids[]", master.id
+  
+app/views/categories/_masters_results.slim:8:in `_app_views_categories__masters_results_slim___1338854456770131672_70100523098140'
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100564003340'
+Started GET "/categories/6" for ::1 at 2019-04-08 22:59:23 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (3.9ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (31.3ms)
+  [1m[36mMaster Load (1.6ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (21.7ms)
+  [1m[36mOffer Load (1.3ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (115.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (103.1ms)
+Completed 200 OK in 623ms (Views: 542.0ms | ActiveRecord: 41.1ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 22:59:53 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (11.9ms)
+  [1m[36mMaster Load (0.6ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (23.0ms)
+  Rendered categories/show.slim within layouts/application (52.1ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:8: syntax error, unexpected '=', expecting ')'
+...cape_html_safe((align="right" =link_to t('common.add_new_mas...
+...                              ^):
+  
+app/views/categories/_masters_results.slim:8: syntax error, unexpected '=', expecting ')'
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100595420800'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:00:03 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (9.7ms)
+  [1m[36mMaster Load (1.0ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (7.2ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (39.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (23.1ms)
+Completed 200 OK in 329ms (Views: 318.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:00:25 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (16.0ms)
+  [1m[36mMaster Load (0.9ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (20.9ms)
+  [1m[36mOffer Load (0.8ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (69.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (70.3ms)
+Completed 200 OK in 504ms (Views: 493.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/masters/new" for ::1 at 2019-04-08 23:00:29 +0300
+Processing by MastersController#new as HTML
+  Rendering masters/new.slim within layouts/application
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/masters/_form.html.erb:19
+  Rendered masters/_form.html.erb (102.2ms)
+  Rendered masters/new.slim within layouts/application (137.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (23.7ms)
+Completed 200 OK in 442ms (Views: 429.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:01:41 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (5.3ms)
+  [1m[36mMaster Load (0.5ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (8.3ms)
+  Rendered categories/show.slim within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Malformed indentation
+  /Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim, Line 9, Column 5
+    - @masters.each do |master|
+    ^
+):
+     6:        th= "Категория"
+     7:        th= "Рабочее время"
+     8:        th align='right' =link_to t('common.add_new_master'), new_master_path, class: "btn btn-info"
+     9:      - @masters.each do |master|
+    10:        tr
+    11:          td align="center" = check_box_tag "master_ids[]", master.id
+    12:          td= link_to "#{master.name}", master_path(master)
+  
+app/views/categories/_masters_results.slim:9
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100599526760'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:03:00 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (5.8ms)
+  [1m[36mMaster Load (0.6ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (12.2ms)
+  [1m[36mOffer Load (1.2ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (38.1ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (45.2ms)
+Completed 200 OK in 377ms (Views: 368.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:03:33 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (7.5ms)
+  [1m[36mMaster Load (0.7ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (12.1ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (42.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (42.4ms)
+Completed 200 OK in 389ms (Views: 381.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:04:53 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (13.9ms)
+  [1m[36mMaster Load (0.7ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (12.0ms)
+  [1m[36mOffer Load (0.6ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (51.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (42.3ms)
+Completed 200 OK in 500ms (Views: 491.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:05:39 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (6.6ms)
+  [1m[36mMaster Load (1.4ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (14.5ms)
+  [1m[36mOffer Load (0.6ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (40.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (37.2ms)
+Completed 200 OK in 367ms (Views: 356.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:05:52 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (8.2ms)
+  [1m[36mMaster Load (0.6ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (15.3ms)
+  Rendered categories/show.slim within layouts/application (42.1ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._safe((check_box_tag('check_all', 'check_all', false, :onCli...
+...                      ^~~~~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...box_tag('check_all', 'check_all', false, :onClick => "checkA...
+...                      ^~~~~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...pe_html_safe((link_to t('common.add_new_master'), new_master...
+...                         ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._html_safe((link_to   t('common.destroy'), master, class:"dr...
+...                         ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:16: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' }))).to_s)); 
+...                            ^~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:20: unterminated string meets end of file
+          end
+             ^
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:20: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:16: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/categories/_masters_results.slim:20: unterminated string meets end of file
+app/views/categories/_masters_results.slim:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100598936920'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:06:09 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (8.4ms)
+  [1m[36mMaster Load (0.5ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (11.6ms)
+  Rendered categories/show.slim within layouts/application (36.2ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+... th  = check_box_tag('check_all', 'check_all', false, :onCli...
+...                      ^~~~~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+...box_tag('check_all', 'check_all', false, :onClick => "checkA...
+...                      ^~~~~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...pe_html_safe((link_to t('common.add_new_master'), new_master...
+...                         ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._html_safe((link_to   t('common.destroy'), master, class:"dr...
+...                         ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:15: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' }))).to_s)); 
+...                            ^~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:19: unterminated string meets end of file
+          end
+             ^
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:19: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/categories/_masters_results.slim:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:15: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/categories/_masters_results.slim:19: unterminated string meets end of file
+app/views/categories/_masters_results.slim:19: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100525300300'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:06:26 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (6.8ms)
+  [1m[36mMaster Load (0.5ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (9.5ms)
+  Rendered categories/show.slim within layouts/application (32.2ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._safe((check_box_tag('check_all', 'check_all', false, :onCli...
+...                      ^~~~~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...box_tag('check_all', 'check_all', false, :onClick => "checkA...
+...                      ^~~~~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+...pe_html_safe((link_to t('common.add_new_master'), new_master...
+...                         ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._html_safe((link_to   t('common.destroy'), master, class:"dr...
+...                         ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:16: syntax error, unexpected tCONSTANT, expecting ')'
+... :delete, data: { confirm: 'Are you sure?' }))).to_s)); 
+...                            ^~~
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:20: unterminated string meets end of file
+          end
+             ^
+/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:20: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:9: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:16: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/categories/_masters_results.slim:16: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/categories/_masters_results.slim:20: unterminated string meets end of file
+app/views/categories/_masters_results.slim:20: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100599739040'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:06:38 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (7.0ms)
+  [1m[36mMaster Load (0.5ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (9.2ms)
+  [1m[36mOffer Load (0.5ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (37.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (35.3ms)
+Completed 200 OK in 353ms (Views: 341.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:07:26 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (17.1ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (21.0ms)
+  [1m[36mMaster Load (1.5ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (15.1ms)
+  Rendered categories/show.slim within layouts/application (79.0ms)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 18.6ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:4: syntax error, unexpected ',', expecting ')'
+...:onClick => "checkAll(this);"), align='center'))).to_s)); 
+...                              ^):
+  
+app/views/categories/_masters_results.slim:4: syntax error, unexpected ',', expecting ')'
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100530386220'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:08:38 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (8.2ms)
+  [1m[36mMaster Load (1.2ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (9.6ms)
+  [1m[36mOffer Load (1.1ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (42.1ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (30.9ms)
+Completed 200 OK in 368ms (Views: 359.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/categories/6" for ::1 at 2019-04-08 23:09:52 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (5.6ms)
+  [1m[36mMaster Load (0.8ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (7.8ms)
+  Rendered categories/show.slim within layouts/application (35.7ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (Malformed indentation
+  /Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim, Line 9, Column 6
+    - @masters.each do |master|
+    ^
+):
+     6:         th= "Категория"
+     7:         th= "Рабочее время"
+     8:         th =link_to t('common.add_new_master'), new_master_path, class: "btn btn-info"
+     9:       - @masters.each do |master|
+    10:         tr
+    11:           td align="center" = check_box_tag "master_ids[]", master.id
+    12:           td= link_to "#{master.name}", master_path(master)
+  
+app/views/categories/_masters_results.slim:9
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100599281820'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:10:05 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (9.1ms)
+  [1m[36mMaster Load (0.6ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (10.9ms)
+  Rendered categories/show.slim within layouts/application (45.6ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 2.2ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/categories/_masters_results.slim:4: syntax error, unexpected '=', expecting keyword_end
+; th align="center"= check_box_tag('check_all', '...
+                   ^):
+  
+app/views/categories/_masters_results.slim:4: syntax error, unexpected '=', expecting keyword_end
+app/views/categories/show.slim:5:in `_app_views_categories_show_slim___3558995384881595448_70100525524480'
+Started GET "/categories/6" for ::1 at 2019-04-08 23:10:43 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (11.4ms)
+  [1m[36mMaster Load (0.5ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:3
+  Rendered categories/_masters_results.slim (18.1ms)
+  [1m[36mOffer Load (0.4ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 6[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (52.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (33.4ms)
+Completed 200 OK in 495ms (Views: 484.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:25:23 +0300
+  [1m[35m (5.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/Mac/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (892.1ms)
+Completed 500 Internal Server Error in 918ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `manager_edit_multiple' for #<#<Class:0x00007f8321767ba8>:0x00007f83217660f0>):
+    1: .container
+    2:   .row
+    3:     .col-md-8
+    4:       = link_to "edit_multiple", manager_edit_multiple(@user)
+    5:       - if current_user and current_user.admin?
+    6:         - User.where(admin: false).each do |user|
+    7:           = user.name
+  
+app/views/pages/home.slim:4:in `_app_views_pages_home_slim___917162002038588315_70100589437460'
+Started GET "/" for ::1 at 2019-04-08 23:25:58 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (1134.6ms)
+Completed 500 Internal Server Error in 1156ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `manager_edit_multiple_path' for #<#<Class:0x00007f8321767ba8>:0x00007f8319d7c5f0>):
+    1: .container
+    2:   .row
+    3:     .col-md-8
+    4:       = link_to "edit_multiple", manager_edit_multiple_path(@user)
+    5:       - if current_user and current_user.admin?
+    6:         - User.where(admin: false).each do |user|
+    7:           = user.name
+  
+app/views/pages/home.slim:4:in `_app_views_pages_home_slim___917162002038588315_70100525508840'
+Started GET "/" for ::1 at 2019-04-08 23:27:45 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (15.5ms)
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (88.9ms)
+  Rendered pages/home.slim within layouts/application (278.9ms)
+  Rendered layouts/_navbar.slim (51.0ms)
+Completed 200 OK in 630ms (Views: 549.6ms | ActiveRecord: 64.4ms)
+
+
+Started GET "/users/manager_edit_multiple" for ::1 at 2019-04-08 23:27:48 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"manager_edit_multiple"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:51
+Completed 404 Not Found in 6ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=manager_edit_multiple):
+  
+app/controllers/users_controller.rb:51:in `set_user'
+Started GET "/users/manager_edit_multiple" for ::1 at 2019-04-08 23:32:32 +0300
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/controllers/users_controller.rb:48: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/" for ::1 at 2019-04-08 23:32:37 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (930.8ms)
+Completed 500 Internal Server Error in 983ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `destroy_all_path' for #<#<Class:0x00007f831f231640>:0x00007f831f2292b0>
+Did you mean?  destroy_session_path):
+    1: .container
+    2:   .row
+    3:     .col-md-8
+    4:     =link_to 'destroy', destroy_all_path(@user)
+    5:       - if current_user and current_user.admin?
+    6:         - User.where(admin: false).each do |user|
+    7:           = user.name
+  
+app/views/pages/home.slim:4:in `_app_views_pages_home_slim___917162002038588315_70100569920840'
+Started GET "/" for ::1 at 2019-04-08 23:33:44 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (60.8ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/destroy_all":String):
+    1: .container
+    2:   .row
+    3:     .col-md-8
+    4:     =link_to 'destroy', destroy_all_path(@user)
+    5:       - if current_user and current_user.admin?
+    6:         - User.where(admin: false).each do |user|
+    7:           = user.name
+  
+app/views/pages/home.slim:4:in `_app_views_pages_home_slim___917162002038588315_70100547113280'
+Started GET "/" for ::1 at 2019-04-08 23:34:08 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (6.6ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (33.0ms)
+  Rendered pages/home.slim within layouts/application (130.1ms)
+  Rendered layouts/_navbar.slim (48.0ms)
+Completed 200 OK in 516ms (Views: 460.5ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:34:11 +0300
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/controllers/users_controller.rb:48: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:34:27 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+Completed 406 Not Acceptable in 797ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#destroy_all is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+react-rails (2.5.0) lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+activesupport (5.2.3) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+activesupport (5.2.3) lib/active_support/callbacks.rb:136:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:35:10 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  Rendered users/_edit_multiple.html.erb (64.0ms)
+  Rendered users/destroy_all.slim within layouts/application (80.0ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 10.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User:0x00007f83228323e8>):
+     6:         <div class="panel-heading">
+     7:           <div class="row">
+     8:             <div class="col col-xs-6">
+     9:               <h3 class="panel-title" style="margin: 10px"><%=current_user.username %></h3>
+    10:             </div>
+    11: 
+    12:             <div class="col col-xs-6 text-right">
+  
+app/views/users/_edit_multiple.html.erb:9:in `block in _app_views_users__edit_multiple_html_erb__3841873867364597334_70100598394580'
+app/views/users/_edit_multiple.html.erb:2:in `_app_views_users__edit_multiple_html_erb__3841873867364597334_70100598394580'
+app/views/users/destroy_all.slim:1:in `_app_views_users_destroy_all_slim__3907888082510081702_70100594886820'
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:35:48 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 11[0m
+  ↳ /Users/Mac/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered users/_edit_multiple.html.erb (1388.9ms)
+  Rendered users/destroy_all.slim within layouts/application (1398.1ms)
+Completed 500 Internal Server Error in 1419ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `as' for #<#<Class:0x00007f83221d0928>:0x00007f83211ba610>):
+    32:             <% User.all.each do |user| %>
+    33:             <tr>
+    34:               <td align="center"><%= check_box_tag "user_ids[]", user.id %></td>
+    35:               <td><%= best_in_place :user, :name, as => :input, id: "name",:ok_button => 'Save', :cancel_button => 'Cancel' %></td>
+    36:               <td><%= best_in_place :user, :email, as => :input, id: "email",:ok_button => 'Save', :cancel_button => 'Cancel' %></td>
+    37:             </tr>
+    38:             <% end %>
+  
+app/views/users/_edit_multiple.html.erb:35:in `block (2 levels) in _app_views_users__edit_multiple_html_erb__3841873867364597334_70100583337980'
+app/views/users/_edit_multiple.html.erb:32:in `block in _app_views_users__edit_multiple_html_erb__3841873867364597334_70100583337980'
+app/views/users/_edit_multiple.html.erb:2:in `_app_views_users__edit_multiple_html_erb__3841873867364597334_70100583337980'
+app/views/users/destroy_all.slim:1:in `_app_views_users_destroy_all_slim__3907888082510081702_70100586453100'
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:37:00 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (13.5ms)
+  Rendered users/destroy_all.slim within layouts/application (38.8ms)
+  Rendered layouts/_navbar.slim (117.6ms)
+Completed 200 OK in 506ms (Views: 497.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:37:01 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (11.7ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (78.1ms)
+  Rendered pages/home.slim within layouts/application (128.2ms)
+  Rendered layouts/_navbar.slim (54.9ms)
+Completed 200 OK in 518ms (Views: 463.7ms | ActiveRecord: 47.8ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:37:04 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (15.8ms)
+  Rendered users/destroy_all.slim within layouts/application (31.7ms)
+  Rendered layouts/_navbar.slim (18.8ms)
+Completed 200 OK in 370ms (Views: 351.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:37:04 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (11.5ms)
+  [1m[36mCategory Load (4.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (16.9ms)
+  Rendered pages/home.slim within layouts/application (91.8ms)
+  Rendered layouts/_navbar.slim (21.3ms)
+Completed 200 OK in 387ms (Views: 363.9ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:37:10 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (8.8ms)
+  Rendered users/destroy_all.slim within layouts/application (20.0ms)
+  Rendered layouts/_navbar.slim (21.3ms)
+Completed 200 OK in 321ms (Views: 308.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:37:10 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (7.3ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (8.8ms)
+  Rendered pages/home.slim within layouts/application (44.5ms)
+  Rendered layouts/_navbar.slim (20.5ms)
+Completed 200 OK in 260ms (Views: 249.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:37:13 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (11.0ms)
+  Rendered users/destroy_all.slim within layouts/application (24.6ms)
+  Rendered layouts/_navbar.slim (30.2ms)
+Completed 200 OK in 309ms (Views: 290.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:37:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (10.1ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (14.5ms)
+  Rendered pages/home.slim within layouts/application (51.4ms)
+  Rendered layouts/_navbar.slim (20.5ms)
+Completed 200 OK in 333ms (Views: 321.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:37:32 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (18.3ms)
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (25.4ms)
+  Rendered pages/home.slim within layouts/application (121.4ms)
+  Rendered layouts/_navbar.slim (35.1ms)
+Completed 200 OK in 891ms (Views: 869.9ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:37:36 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (11.8ms)
+  Rendered users/destroy_all.slim within layouts/application (27.6ms)
+  Rendered layouts/_navbar.slim (23.2ms)
+Completed 200 OK in 373ms (Views: 361.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:38:17 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (18.4ms)
+  Rendered users/destroy_all.slim within layouts/application (26.3ms)
+  Rendered layouts/_navbar.slim (25.7ms)
+Completed 200 OK in 363ms (Views: 351.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-08 23:38:20 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.slim within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/new.slim:1
+  Rendered users/new.slim within layouts/application (89.6ms)
+  Rendered layouts/_navbar.slim (38.4ms)
+Completed 200 OK in 374ms (Views: 361.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/create_by_owner" for ::1 at 2019-04-08 23:38:40 +0300
+Processing by UsersController#create_by_owner as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nfIGtpfWpoe7Q0sMaEw7oN5NjswToQ88670j9ZiUv/SC/XO4ACF3UxlK4V1ew/ILx9JanOJ0PBlpLIYKwNY0wA==", "user"=>{"name"=>"Misha", "email"=>"1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (13.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (11.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('1@gmail.com', '$2a$11$hSvsPtVPSEZhURwOdQH7sesgp8hZ2saFlMS5WQKK8N9SMkZ3bE1PO', '2019-04-08 20:38:40', '2019-04-08 20:38:40', 'Misha')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 253ms (ActiveRecord: 29.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:38:40 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (10.8ms)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (10.4ms)
+  Rendered pages/home.slim within layouts/application (40.6ms)
+  Rendered layouts/_navbar.slim (94.4ms)
+Completed 200 OK in 471ms (Views: 465.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-08 23:38:44 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.slim within layouts/application
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/new.slim:1
+  Rendered users/new.slim within layouts/application (27.4ms)
+  Rendered layouts/_navbar.slim (17.3ms)
+Completed 200 OK in 318ms (Views: 299.7ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/create_by_owner" for ::1 at 2019-04-08 23:38:59 +0300
+Processing by UsersController#create_by_owner as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CbjJ9c3QnAe+RNSbXnpwLrzb3tdRe6d2VVTFzxGCRvgWt7z7WidN0xxNfspo9bmFpUQKh6CulFPXxWAwScDNzA==", "user"=>{"name"=>"Katya", "email"=>"3@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '3@email.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (11.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('3@email.com', '$2a$11$6.LmBuH25WBWFpQD8dx3H.U3xUdrhMHjXiCMR1rrIG3yM7qQkiwHC', '2019-04-08 20:38:59', '2019-04-08 20:38:59', 'Katya')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:38:59 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (4.2ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (5.6ms)
+  Rendered pages/home.slim within layouts/application (29.6ms)
+  Rendered layouts/_navbar.slim (13.4ms)
+Completed 200 OK in 223ms (Views: 217.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-08 23:39:03 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/new.slim:1
+  Rendered users/new.slim within layouts/application (15.2ms)
+  Rendered layouts/_navbar.slim (19.6ms)
+Completed 200 OK in 264ms (Views: 254.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/create_by_owner" for ::1 at 2019-04-08 23:39:45 +0300
+Processing by UsersController#create_by_owner as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3M0qc4bAx9Ban7JglsBoXN3aUHbOlMIOB3V3I0WL+TfDwl99ETcWBPiWGDGgT6H3xEWEJj9B8SuF5NLcHclyAw==", "user"=>{"name"=>"Kostya", "email"=>"2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '2@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (11.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('2@gmail.com', '$2a$11$Rsx0wvyswDaKZ/UwuLGNL.klwNYjqPBd6THxiXdE6Kmf2maFIN9TS', '2019-04-08 20:39:45', '2019-04-08 20:39:45', 'Kostya')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 15.9ms)
+
+
+Started GET "/" for ::1 at 2019-04-08 23:39:45 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (4.4ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (5.1ms)
+  Rendered pages/home.slim within layouts/application (23.0ms)
+  Rendered layouts/_navbar.slim (109.4ms)
+Completed 200 OK in 222ms (Views: 217.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-08 23:39:48 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (8.5ms)
+  Rendered users/destroy_all.slim within layouts/application (15.5ms)
+  Rendered layouts/_navbar.slim (18.4ms)
+Completed 200 OK in 249ms (Views: 235.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f8320a33158%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:39:53 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (7.5ms)
+  Rendered users/destroy_all.slim within layouts/application (53.1ms)
+  Rendered layouts/_navbar.slim (27.7ms)
+Completed 200 OK in 515ms (Views: 456.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f8320a33158%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:39:57 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (7.1ms)
+  Rendered users/destroy_all.slim within layouts/application (52.6ms)
+  Rendered layouts/_navbar.slim (31.8ms)
+Completed 200 OK in 486ms (Views: 412.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f8320a33158%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:40:00 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (6.5ms)
+  Rendered users/destroy_all.slim within layouts/application (52.5ms)
+  Rendered layouts/_navbar.slim (23.9ms)
+Completed 200 OK in 546ms (Views: 491.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f8320a33158%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:40:02 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (5.2ms)
+  Rendered users/destroy_all.slim within layouts/application (49.5ms)
+  Rendered layouts/_navbar.slim (19.4ms)
+Completed 200 OK in 624ms (Views: 518.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a790ff0%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:40:10 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (5.7ms)
+  Rendered users/destroy_all.slim within layouts/application (44.2ms)
+  Rendered layouts/_navbar.slim (46.7ms)
+Completed 200 OK in 459ms (Views: 411.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:40:55 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Destroy (6.2ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 15[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (74.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 16[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (9.2ms)
+  Rendered users/destroy_all.slim within layouts/application (140.6ms)
+  Rendered layouts/_navbar.slim (19.8ms)
+Completed 200 OK in 977ms (Views: 674.2ms | ActiveRecord: 156.1ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:44:11 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (85.3ms)
+  Rendered users/destroy_all.slim within layouts/application (241.1ms)
+  Rendered layouts/_navbar.slim (34.8ms)
+Completed 200 OK in 1285ms (Views: 968.9ms | ActiveRecord: 36.9ms)
+
+
+Started PUT "/users/17" for ::1 at 2019-04-08 23:44:22 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"Misha"}, "authenticity_token"=>"UYnKyWY4YHU5XBJQZd7dLCXse9q9jBKkWUUxEFdwhe7qj1aSljE/VpdmlhQGR4jeHDX17Y9J//7b5vZOAdgWiA==", "id"=>"17"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+Completed 500 Internal Server Error in 480ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007f8320e778b8>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:18:in `update'
+Started PUT "/users/17" for ::1 at 2019-04-08 23:44:32 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"Misha"}, "authenticity_token"=>"UYnKyWY4YHU5XBJQZd7dLCXse9q9jBKkWUUxEFdwhe7qj1aSljE/VpdmlhQGR4jeHDX17Y9J//7b5vZOAdgWiA==", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007f832247ca50>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:18:in `update'
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:44:35 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (6.2ms)
+  Rendered users/destroy_all.slim within layouts/application (47.0ms)
+  Rendered layouts/_navbar.slim (21.4ms)
+Completed 200 OK in 455ms (Views: 407.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:45:24 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:31
+  Rendered users/_edit_multiple.html.erb (6.7ms)
+  Rendered users/destroy_all.slim within layouts/application (43.2ms)
+  Rendered layouts/_navbar.slim (21.5ms)
+Completed 200 OK in 487ms (Views: 446.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:50:21 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:18
+  Rendered users/_edit_multiple.html.erb (8.4ms)
+  Rendered users/destroy_all.slim within layouts/application (45.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (27.5ms)
+Completed 200 OK in 496ms (Views: 446.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:51:38 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  Rendered users/_edit_multiple.html.erb (2.5ms)
+  Rendered users/destroy_all.slim within layouts/application (50.9ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/_edit_multiple.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_edit_multiple.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/_edit_multiple.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/destroy_all.slim:1:in `_app_views_users_destroy_all_slim__3907888082510081702_70100530012560'
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:51:53 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  Rendered users/_edit_multiple.html.erb (1.5ms)
+  Rendered users/destroy_all.slim within layouts/application (55.2ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/_edit_multiple.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_edit_multiple.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/_edit_multiple.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/destroy_all.slim:1:in `_app_views_users_destroy_all_slim__3907888082510081702_70100595151260'
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:53:14 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  Rendered users/_edit_multiple.html.erb (1.0ms)
+  Rendered users/destroy_all.slim within layouts/application (44.0ms)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/Mac/Desktop/rails/salon_it/app/views/users/_edit_multiple.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/_edit_multiple.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/_edit_multiple.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/_edit_multiple.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/users/destroy_all.slim:1:in `_app_views_users_destroy_all_slim__3907888082510081702_70100583424460'
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:53:58 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (75.5ms)
+  Rendered users/destroy_all.slim within layouts/application (145.5ms)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `ema' for #<User:0x00007f8322af2970>
+Did you mean?  email):
+    33:             <tr>
+    34:               <td align="center"><%= check_box_tag "user_ids[]", user.id %></td>
+    35:               <td><%= best_in_place user,:name, :as => :input, id: "name",:ok_button => 'Save', :cancel_button => 'Cancel' %></td>
+    36:               <td><%= best_in_place user,:ema, :as => :input, id: "name",:ok_button => 'Save', :cancel_button => 'Cancel' %></td>
+    37:             </tr>
+    38:             <% end %>
+    39:           </tbody>
+  
+app/views/users/_edit_multiple.html.erb:36:in `block (2 levels) in _app_views_users__edit_multiple_html_erb__3841873867364597334_70100596664940'
+app/views/users/_edit_multiple.html.erb:32:in `block in _app_views_users__edit_multiple_html_erb__3841873867364597334_70100596664940'
+app/views/users/_edit_multiple.html.erb:2:in `_app_views_users__edit_multiple_html_erb__3841873867364597334_70100596664940'
+app/views/users/destroy_all.slim:1:in `_app_views_users_destroy_all_slim__3907888082510081702_70100599703280'
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:54:34 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (6.3ms)
+  Rendered users/destroy_all.slim within layouts/application (55.1ms)
+  Rendered layouts/_navbar.slim (49.9ms)
+Completed 200 OK in 574ms (Views: 523.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:56:01 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:22
+  Rendered users/_edit_multiple.html.erb (25.1ms)
+  Rendered users/destroy_all.slim within layouts/application (109.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (47.4ms)
+Completed 200 OK in 852ms (Views: 742.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:56:22 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:22
+  Rendered users/_edit_multiple.html.erb (12.8ms)
+  Rendered users/destroy_all.slim within layouts/application (71.7ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (30.5ms)
+Completed 200 OK in 863ms (Views: 794.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:57:46 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:23
+  Rendered users/_edit_multiple.html.erb (20.5ms)
+  Rendered users/destroy_all.slim within layouts/application (70.3ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (36.1ms)
+Completed 200 OK in 661ms (Views: 602.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:58:24 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:23
+  Rendered users/_edit_multiple.html.erb (13.7ms)
+  Rendered users/destroy_all.slim within layouts/application (84.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (43.2ms)
+Completed 200 OK in 669ms (Views: 596.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:58:35 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:23
+  Rendered users/_edit_multiple.html.erb (8.5ms)
+  Rendered users/destroy_all.slim within layouts/application (66.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (29.9ms)
+Completed 200 OK in 659ms (Views: 605.6ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/users/17" for ::1 at 2019-04-08 23:58:47 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"Misha"}, "authenticity_token"=>"aFxaPP/S1ScvUEJrM+pLuxC7tZVpdD1I4XujNbzztIPTWsZnD9uKBIFqxi9Qcx5JKWI7olux0BJj2GRr6lsn5Q==", "id"=>"17"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+Completed 500 Internal Server Error in 437ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007f832134c618>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:18:in `update'
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:59:14 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:23
+  Rendered users/_edit_multiple.html.erb (14.5ms)
+  Rendered users/destroy_all.slim within layouts/application (72.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (29.9ms)
+Completed 200 OK in 744ms (Views: 674.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-08 23:59:54 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:23
+  Rendered users/_edit_multiple.html.erb (6.3ms)
+  Rendered users/destroy_all.slim within layouts/application (54.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (23.5ms)
+Completed 200 OK in 530ms (Views: 466.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a670e18%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=15&user_ids%5B%5D=16" for ::1 at 2019-04-09 00:01:08 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["15", "16"]}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (15, 16)[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:23
+  Rendered users/_edit_multiple.html.erb (26.0ms)
+  Rendered users/destroy_all.slim within layouts/application (73.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (45.2ms)
+Completed 200 OK in 733ms (Views: 659.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a7b8898%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=17" for ::1 at 2019-04-09 00:01:17 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["17"]}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Destroy (5.7ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 17[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:23
+  Rendered users/_edit_multiple.html.erb (4.7ms)
+  Rendered users/destroy_all.slim within layouts/application (46.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (54.5ms)
+Completed 200 OK in 795ms (Views: 695.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a7b8898%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=17" for ::1 at 2019-04-09 00:02:46 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["17"]}
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (30.1ms)
+  Rendered users/destroy_all.slim within layouts/application (99.6ms)
+  Rendered layouts/_navbar.slim (30.3ms)
+Completed 200 OK in 893ms (Views: 790.9ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a7b8898%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=17" for ::1 at 2019-04-09 00:03:30 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["17"]}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:32
+  Rendered users/_edit_multiple.html.erb (18.0ms)
+  Rendered users/destroy_all.slim within layouts/application (55.9ms)
+  Rendered layouts/_navbar.slim (24.4ms)
+Completed 200 OK in 541ms (Views: 494.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/destroy_all.%23%3CUser::ActiveRecord_Relation:0x00007f831a7b8898%3E?utf8=%E2%9C%93&commit=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C&user_ids%5B%5D=17" for ::1 at 2019-04-09 00:04:02 +0300
+Processing by UsersController#destroy_all as 
+  Parameters: {"utf8"=>"✓", "commit"=>"Удалить", "user_ids"=>["17"]}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:30
+  Rendered users/_edit_multiple.html.erb (8.8ms)
+  Rendered users/destroy_all.slim within layouts/application (60.3ms)
+  Rendered layouts/_navbar.slim (22.2ms)
+Completed 200 OK in 652ms (Views: 587.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-04-09 00:04:41 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (18.2ms)
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (73.7ms)
+  Rendered pages/home.slim within layouts/application (116.2ms)
+  Rendered layouts/_navbar.slim (64.6ms)
+Completed 200 OK in 507ms (Views: 455.2ms | ActiveRecord: 45.7ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-09 00:04:44 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:30
+  Rendered users/_edit_multiple.html.erb (7.8ms)
+  Rendered users/destroy_all.slim within layouts/application (23.1ms)
+  Rendered layouts/_navbar.slim (31.5ms)
+Completed 200 OK in 287ms (Views: 276.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-09 00:04:48 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/new.slim:1
+  Rendered users/new.slim within layouts/application (21.4ms)
+  Rendered layouts/_navbar.slim (20.0ms)
+Completed 200 OK in 297ms (Views: 291.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/create_by_owner" for ::1 at 2019-04-09 00:05:02 +0300
+Processing by UsersController#create_by_owner as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAxFZH2HWGvYItAdkZ6oX9CwgDfDw4b1oZv2miGt3mzfAzBq6nCJv3orekynEWH0yS9UZzIWtdAjClNlee9VWA==", "user"=>{"name"=>"Misha", "email"=>"1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '1@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (10.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('1@gmail.com', '$2a$11$KQ0c4.mgzuHQqMugRK0gceA.UhMndu8qkcIIu8CP3pwhUhr2xjg1e', '2019-04-08 21:05:02', '2019-04-08 21:05:02', 'Misha')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 203ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-09 00:05:02 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (5.2ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (8.0ms)
+  Rendered pages/home.slim within layouts/application (32.0ms)
+  Rendered layouts/_navbar.slim (27.2ms)
+Completed 200 OK in 289ms (Views: 284.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-09 00:05:05 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:30
+  Rendered users/_edit_multiple.html.erb (14.4ms)
+  Rendered users/destroy_all.slim within layouts/application (26.2ms)
+  Rendered layouts/_navbar.slim (21.5ms)
+Completed 200 OK in 336ms (Views: 317.1ms | ActiveRecord: 7.6ms)
+
+
+Started PUT "/users/18" for ::1 at 2019-04-09 00:05:24 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"Катя"}, "authenticity_token"=>"4qQ5srv8H8cbXqvWGA6nTqDGo/qare0xGqS1/gsZOmZZoqXpS/VA5LVkL5J7l/K8mR8tzahoAGuYB3KgXbGpAA==", "id"=>"18"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007f8319dfd970>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:18:in `update'
+Started GET "/destroy_all" for ::1 at 2019-04-09 00:06:29 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:30
+  Rendered users/_edit_multiple.html.erb (103.8ms)
+  Rendered users/destroy_all.slim within layouts/application (112.8ms)
+  Rendered layouts/_navbar.slim (17.4ms)
+Completed 200 OK in 310ms (Views: 220.8ms | ActiveRecord: 83.0ms)
+
+
+Started PUT "/users/18" for ::1 at 2019-04-09 00:06:50 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"Настя"}, "authenticity_token"=>"o9AnWrwSGIad1FE0iLY3db0NvfGXl/z3T7DOnGvRKosY1rsBTBtHpTPu1XDrL2KHhNQzxqVSEa3NEwnCPXm57Q==", "id"=>"18"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Update (4.1ms)[0m  [1m[33mUPDATE `users` SET `name` = 'Настя', `updated_at` = '2019-04-08 21:06:50' WHERE `users`.`id` = 18[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 204 No Content in 28ms (ActiveRecord: 7.8ms)
+
+
+Started PUT "/users/18" for ::1 at 2019-04-09 00:06:58 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"2@gmail.com"}, "authenticity_token"=>"o9AnWrwSGIad1FE0iLY3db0NvfGXl/z3T7DOnGvRKosY1rsBTBtHpTPu1XDrL2KHhNQzxqVSEa3NEwnCPXm57Q==", "id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '2@gmail.com' AND `users`.`id` != 18 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Update (7.5ms)[0m  [1m[33mUPDATE `users` SET `email` = '2@gmail.com', `updated_at` = '2019-04-08 21:06:58' WHERE `users`.`id` = 18[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 204 No Content in 35ms (ActiveRecord: 14.1ms)
+
+
+Started PUT "/users/18" for ::1 at 2019-04-09 00:07:04 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"1@gmail.com"}, "authenticity_token"=>"o9AnWrwSGIad1FE0iLY3db0NvfGXl/z3T7DOnGvRKosY1rsBTBtHpTPu1XDrL2KHhNQzxqVSEa3NEwnCPXm57Q==", "id"=>"18"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '1@gmail.com' AND `users`.`id` != 18 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE `users` SET `email` = '1@gmail.com', `updated_at` = '2019-04-08 21:07:04' WHERE `users`.`id` = 18[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 204 No Content in 27ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-04-09 00:07:22 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/new.slim:1
+  Rendered users/new.slim within layouts/application (13.7ms)
+  Rendered layouts/_navbar.slim (14.4ms)
+Completed 200 OK in 271ms (Views: 264.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/create_by_owner" for ::1 at 2019-04-09 00:07:38 +0300
+Processing by UsersController#create_by_owner as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"23WbxOxxb0ieYI3pkCbXc6mtcwNHioGwFdXkn5fqQ4bEeu7Ke4a+nDxpJ7imqR7YsDKnU7ZfspWXREFgz6jIsg==", "user"=>{"name"=>"Misha", "email"=>"2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '2@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `name`) VALUES ('2@gmail.com', '$2a$11$7YrJ5UmQ5jZra9ckO2ODDe8gLEb4RwAXujFq/GocfnZJm/MlWHwGC', '2019-04-08 21:07:38', '2019-04-08 21:07:38', 'Misha')[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 185ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2019-04-09 00:07:38 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (6.0ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (26.1ms)
+  Rendered pages/home.slim within layouts/application (53.6ms)
+  Rendered layouts/_navbar.slim (21.8ms)
+Completed 200 OK in 348ms (Views: 330.7ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-09 00:07:42 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:30
+  Rendered users/_edit_multiple.html.erb (8.0ms)
+  Rendered users/destroy_all.slim within layouts/application (15.6ms)
+  Rendered layouts/_navbar.slim (58.9ms)
+Completed 200 OK in 299ms (Views: 289.1ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/users/19" for ::1 at 2019-04-09 00:07:50 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"1@gmail.com"}, "authenticity_token"=>"bBfWu2s1y7f39VWmgTBm4S6MU3Y5tNHX3cB5eBT134/XEUrgmzyUlFnP0eLiqTMTF1XdQQtxPI1fY74mQl1M6Q==", "id"=>"19"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '1@gmail.com' AND `users`.`id` != 19 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 422 Unprocessable Entity in 13ms (Views: 2.1ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/users/19" for ::1 at 2019-04-09 00:07:56 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"email"=>"1@gmail.com"}, "authenticity_token"=>"bBfWu2s1y7f39VWmgTBm4S6MU3Y5tNHX3cB5eBT134/XEUrgmzyUlFnP0eLiqTMTF1XdQQtxPI1fY74mQl1M6Q==", "id"=>"19"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '1@gmail.com' AND `users`.`id` != 19 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 422 Unprocessable Entity in 10ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/users/19" for ::1 at 2019-04-09 00:08:07 +0300
+Processing by UsersController#update as JSON
+  Parameters: {"user"=>{"name"=>"Костя"}, "authenticity_token"=>"bBfWu2s1y7f39VWmgTBm4S6MU3Y5tNHX3cB5eBT134/XEUrgmzyUlFnP0eLiqTMTF1XdQQtxPI1fY74mQl1M6Q==", "id"=>"19"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE `users` SET `name` = 'Костя', `updated_at` = '2019-04-08 21:08:07' WHERE `users`.`id` = 19[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:18
+Completed 204 No Content in 20ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-09 00:10:11 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (11.7ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (10.5ms)
+  Rendered pages/home.slim within layouts/application (65.3ms)
+  Rendered layouts/_navbar.slim (33.2ms)
+Completed 200 OK in 415ms (Views: 405.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-09 00:10:47 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/pages/home.slim:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/pages/home.slim:6
+  Rendered pages/_add_widget.slim (6.6ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/pages/_category_widget.slim:5
+  Rendered pages/_category_widget.slim (10.5ms)
+  Rendered pages/home.slim within layouts/application (34.9ms)
+  Rendered layouts/_navbar.slim (32.4ms)
+Completed 200 OK in 304ms (Views: 298.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/destroy_all" for ::1 at 2019-04-09 00:11:14 +0300
+Processing by UsersController#destroy_all as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/users_controller.rb:32
+  Rendering users/destroy_all.slim within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_edit_multiple.html.erb:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`admin` = FALSE[0m
+  ↳ app/views/users/_edit_multiple.html.erb:30
+  Rendered users/_edit_multiple.html.erb (12.0ms)
+  Rendered users/destroy_all.slim within layouts/application (22.6ms)
+  Rendered layouts/_navbar.slim (31.7ms)
+Completed 200 OK in 328ms (Views: 313.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/categories/10" for ::1 at 2019-04-09 00:11:31 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/categories_controller.rb:35
+  Rendering categories/show.slim within layouts/application
+  Rendered categories/_edit.slim (6.9ms)
+  [1m[36mMaster Load (7.4ms)[0m  [1m[34mSELECT `masters`.* FROM `masters` WHERE `masters`.`category_id` = 10[0m
+  ↳ app/views/categories/show.slim:3
+  [1m[36mOffer Load (4.0ms)[0m  [1m[34mSELECT `offers`.* FROM `offers` WHERE `offers`.`category_id` = 10[0m
+  ↳ app/views/categories/show.slim:6
+  Rendered categories/show.slim within layouts/application (49.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (28.8ms)
+Completed 200 OK in 544ms (Views: 499.9ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/masters/new" for ::1 at 2019-04-09 00:11:38 +0300
+Processing by MastersController#new as HTML
+  Rendering masters/new.slim within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  ↳ app/views/masters/_form.html.erb:19
+  Rendered masters/_form.html.erb (7.1ms)
+  Rendered masters/new.slim within layouts/application (14.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_navbar.slim:10
+  Rendered layouts/_navbar.slim (22.7ms)
+Completed 200 OK in 269ms (Views: 237.8ms | ActiveRecord: 21.5ms)
+
+

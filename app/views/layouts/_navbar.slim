@@ -13,9 +13,9 @@ body
               a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" role="button"
                 = t('common.admin')
               .dropdown-menu aria-labelledby="navbarDropdown"
-                = link_to t('common.show_all_managers'), users_path(@user), class: "dropdown-item" if current_user.admin?
+                = link_to t('common.show_all_managers'), destroy_all_path(@user), class: "dropdown-item" if current_user.admin?
                 = link_to t('common.masters'), masters_path, class: "dropdown-item"
-                = link_to t('common.offers'), offers_path, class: "dropdown-item" 
+                = link_to t('common.offers'), offers_path, class: "dropdown-item"
           li.nav-item
             a.nav-link.disabled href="#"  Disabled
           .form-inline.my-2.my-lg-0
@@ -27,7 +27,6 @@ body
           = link_to "Be", {:locale => :be }, class: "btn btn-outline-light btn-sm"
           - if !current_user
             = link_to t('common.sign_in'), new_user_session_path , class: "btn btn-outline-info btn-sm",style: "margin:5px"
-            = link_to t('common.masters'), new_master_path, class: "dropdown-item"
           - else
             = link_to t('common.sign_out'), destroy_user_session_path,class: 'btn btn-outline-info btn-sm', method: :delete
             = link_to t('common.sign_up_by_owner'), new_user_path ,class: "btn btn-outline-primary btn-sm" if current_user.admin?

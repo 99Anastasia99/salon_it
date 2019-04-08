@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authorize_owner, only: :create_by_owner
   before_action :set_user, only: [:show,:destroy]
+  respond_to :html,:json
   def create_by_owner
        @user = User.new(manager_params)
        if @user.save
@@ -12,6 +13,11 @@ class UsersController < ApplicationController
   end
   def show
   end
+  def update
+    @user = User.find(params[:id])
+    @user.update_attributes(manager_params)
+    respond_with @user
+  end
   def destroy
   @user.destroy
   respond_to do |format|
@@ -21,15 +27,9 @@ class UsersController < ApplicationController
   end
   def index
   end
-  def manager_edit_multiple
-    @user=User.where(id: params[:users_id])
-   if params_edit == t('common.destroy')
-   @user.destroy_all
-  elsif params_edit == t('common.lock')
-  @user.each {|user_to_lock| user_to_lock.lock_access! }
-  elsif params_edit == t('common.unlock')
-  @user.each {|user_to_unlock| user_to_unlock.unlock_access!}
-  end
+  def destroy_all
+    @user=User.where(id: params[:user_ids])
+    @user.destroy_all
   end
   private
  def authorize_owner

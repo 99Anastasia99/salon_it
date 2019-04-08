@@ -1,11 +1,11 @@
 #masters_results
   table.table.table-striped.table-bordered.table-list
     tr
-      th align="center" = check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
+      th align="center"= check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
       th= "Имя"
       th= "Категория"
       th= "Рабочее время"
-      th= "Action"
+      th =link_to t('common.add_new_master'), new_master_path, class: "btn btn-info"
     - @masters.each do |master|
       tr
         td align="center" = check_box_tag "master_ids[]", master.id
