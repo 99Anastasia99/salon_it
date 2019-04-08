@@ -1,9 +1,2 @@
-table.table.table-striped.table-bordered.table-list
-  tr
-    th= "name"
-    th= "e-mail"
-
-  - User.where(admin: false).each do |user|
-    tr
-      td= user.name
-      td= user.email
+.container
+  = render 'users/manager_edit_multiple'

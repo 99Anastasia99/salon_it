@@ -1,0 +1,6 @@
+#results
+  .row
+    .col-md-8
+      h3= best_in_place @category, :name, :as => :input, id: "name",:ok_button => 'Save', :cancel_button => 'Cancel'
+    .col-md-4 align="right"
+      =link_to   t('common.destroy'), @category, class:"btn btn-outline-danger" , method: :delete

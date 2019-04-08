@@ -7,6 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+gem 'best_in_place', '~> 3.1', '>= 3.1.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'rails-i18n', '~> 5.1'

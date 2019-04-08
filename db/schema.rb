@@ -51,9 +51,9 @@ ActiveRecord::Schema.define(version: 2019_04_05_175154) do
 
   create_table "working_hours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "masters_id"
-    t.integer "day_of_week"
     t.time "open"
     t.time "close"
+    t.integer "day_of_week"
     t.index ["masters_id"], name: "index_working_hours_on_masters_id"
   end
 

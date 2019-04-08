@@ -1,5 +1,10 @@
 .container
-    - if current_user.admin?
-      - User.where(admin: false).each do |user|
-        = user.name
-        = user. email
+  .row
+    .col-md-8
+      - if current_user and current_user.admin?
+        - User.where(admin: false).each do |user|
+          = user.name
+          = user. email
+    .col-md-4
+      =render 'add_widget'
+      =render 'category_widget'

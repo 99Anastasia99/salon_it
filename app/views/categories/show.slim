@@ -1,0 +1,8 @@
+.container
+  = render 'edit'
+  - if !@masters.blank?
+    .h5 =t('common.master_of_category')
+    = render 'masters_results'
+  - if !@offers.blank?
+    .h5 =t('common.offers_of_category')
+    = render 'offers_results'

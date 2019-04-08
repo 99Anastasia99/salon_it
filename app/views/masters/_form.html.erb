@@ -1,4 +1,5 @@
 <%= form_for(master) do |f| %>
+<div class="container">
   <% if master.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(master.errors.count, "error") %> prohibited this master from being saved:</h2>
@@ -19,7 +20,25 @@
     or create one:
     <%= f.text_field :new_category_name %>
   </p>
+
+ <div class="container">
+  <div class="row">
+    <div class="col">
+    <table class="table table-striped table-bordered table-list">
+      <tr>
+        <th> Начало работы</th>
+        <th> Конец работы</th>
+      </tr>
+      <tr>
+        <td><%= f.text_field :open, id: "working_hours" %></td>
+        <td><%= f.text_field :close, id: "working_hours"%></td>
+      </table>
+      </div>
+      </div>
+      </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>

@@ -1,0 +1,19 @@
+#offers_table
+table.table.table-striped.table-bordered.table-list
+  tr
+    th align="center" = check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
+    th= "Название"
+    th= "Описание"
+    th= "Категория"
+    th= "Продолжительность"
+    th= "Цена, руб"
+    th= "Action"
+  - @offers.each do |offer|
+    tr
+      td align="center" = check_box_tag "master_ids[]", offer.id
+      td= link_to "#{offer.name}", offer_path(offer)
+      td= offer.description
+      td= offer.category.name
+      td= offer.duration
+      td= offer.price
+      td= link_to   t('common.destroy'), offer, class:"dropdown-item align-middle" , method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  # has_many :offers, depenent: destroy
-  has_many :categorizations
-  has_many :masters, :through => :categorizations
+  has_many :offers, dependent: :destroy
+  has_many :masters, dependent: :destroy
+  validates :name,length: {maximum: 20},presence: true, uniqueness: { scope: :name, message: "must be unique " }
 end

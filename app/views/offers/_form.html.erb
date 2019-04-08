@@ -1,0 +1,42 @@
+      <%= form_for(offer) do |f| %>
+        <% if offer.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(offer.errors.count, "error") %> prohibited this @offer from being saved:</h2>
+            <ul>
+            <% offer.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+        <p>
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_field :description%>
+          </div>
+        </p>
+        <p>
+          <div class="field">
+            <%= f.label :duration %>
+            <%= f.text_field :duration%>
+          </div>
+        </p>
+        <p>
+          <label for="master_category_id">Category:</label><br />
+          <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => "Select a Category" %>
+          or create one:
+          <%= f.text_field :new_category_name %>
+          <p>
+            <div class="field">
+              <%= f.label :price %>
+              <%= f.text_field :price%>
+            </div>
+          </p>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
