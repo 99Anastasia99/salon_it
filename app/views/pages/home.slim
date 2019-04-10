@@ -3,9 +3,13 @@
     .col-md-8
       =link_to 'destroy', destroy_all_path(@user)
       - if current_user and current_user.admin?
-        - User.where(admin: false).each do |user|
-          = user.name
-          = user. email
+      - Client.all.each do |client|
+        p
+        = client.name
+        br= client.patronymic
+        br= client.surname
+        br= client.date_of_birth.to_s.split("00:00:00 +0300")[0]
+
     .col-md-4
       =render 'add_widget'
       =render 'category_widget'

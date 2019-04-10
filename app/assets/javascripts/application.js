@@ -19,6 +19,7 @@
 //= require react
 //= require react_ujs
 //= require components
+//= require jquery-ui/widgets/datepicker
 //= require_tree .
 
 //= require jquery

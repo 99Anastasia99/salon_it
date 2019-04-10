@@ -1,0 +1,28 @@
+.container
+  table.table.table-striped.table-bordered.table-list
+    tr
+      th= "ФИО клиента"
+      th= "Домашний адрес"
+      th= "Количество посещений"
+      th= "Суммарные траты"
+    tr
+      td= "#{@client.surname} #{@client.name} #{@client.patronymic}"
+      td= "#{@client.country},#{@client.region}, #{@client.city}, #{@client.street}, #{@client.building} - #{@client.flat}"
+      td= @client.total_visits
+      td= @client.total_spending
+  table.table.table-striped.table-bordered.table-list
+      tr
+        th align="center"= check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
+        th= "Дата посещения"
+        th= "Мастер"
+        th= "Услуга"
+        th= "Итоговая стоимость"
+        th =link_to t('common.add_new_master'), new_master_path, class: "btn btn-info"
+      - Visit.where(client_id: @client.id).all.each do |visit|
+        tr
+          td align="left" = check_box_tag "visit_ids[]", visit.id
+          td= visit.date_of_visit
+          td= visit.master.name
+          td= Offer.find(visit.offers_list).name
+          td= visit.total_price
+          td= link_to   t('common.destroy'), visit, class:"dropdown-item align-middle" , method: :delete, data: { confirm: 'Are you sure?' }

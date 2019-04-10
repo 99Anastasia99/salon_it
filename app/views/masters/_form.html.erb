@@ -14,6 +14,14 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+  <div class="field">
+    <%= f.label :patronymmic %>
+    <%= f.text_field :patronymmic%>
+  </div>
+  <div class="field">
+    <%= f.label :surname %>
+    <%= f.text_field :surname%>
+  </div>
   <p>
     <label for="master_category_id">Category:</label><br />
     <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => "Select a Category" %>

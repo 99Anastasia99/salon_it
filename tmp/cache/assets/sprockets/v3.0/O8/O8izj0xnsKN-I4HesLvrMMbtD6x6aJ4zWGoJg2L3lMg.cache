@@ -1,0 +1,9 @@
+I"’(function() {
+  jQuery(function() {
+    return $('#client_date_of_birth').datepicker({
+      dateFormat: 'dd-mm-yy'
+    });
+  });
+
+}).call(this);
+:ET

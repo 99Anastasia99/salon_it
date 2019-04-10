@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_05_175154) do
+ActiveRecord::Schema.define(version: 2019_04_10_183409) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -18,9 +18,28 @@ ActiveRecord::Schema.define(version: 2019_04_05_175154) do
     t.index ["masters_id"], name: "index_categories_on_masters_id"
   end
 
+  create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.float "average_spending", default: 0.0
+    t.integer "average_visits", default: 0
+    t.string "name"
+    t.string "patronymic"
+    t.string "surname"
+    t.datetime "date_of_birth"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "city"
+    t.string "street"
+    t.string "region"
+    t.string "country"
+    t.string "building"
+    t.integer "flat"
+  end
+
   create_table "masters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.bigint "category_id"
+    t.string "surname"
+    t.string "patronymmic"
     t.index ["category_id"], name: "index_masters_on_category_id"
   end
 
@@ -49,6 +68,20 @@ ActiveRecord::Schema.define(version: 2019_04_05_175154) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "visits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "client_id"
+    t.bigint "offer_id"
+    t.string "offers_list"
+    t.date "date_of_visit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "price", default: 0.0
+    t.bigint "master_id"
+    t.index ["client_id"], name: "index_visits_on_client_id"
+    t.index ["master_id"], name: "index_visits_on_master_id"
+    t.index ["offer_id"], name: "index_visits_on_offer_id"
+  end
+
   create_table "working_hours", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "masters_id"
     t.time "open"
@@ -59,4 +92,6 @@ ActiveRecord::Schema.define(version: 2019_04_05_175154) do
 
   add_foreign_key "offers", "categories"
   add_foreign_key "offers", "masters"
+  add_foreign_key "visits", "clients"
+  add_foreign_key "visits", "offers"
 end

@@ -19,7 +19,7 @@ end
   end
   private
   def master_params
-    params.require(:master).permit(:name, :category_id, :new_category_name, :working_hours_id, :day_of_week,:open, :close)
+    params.require(:master).permit(:name,:patronymmic,:surname, :category_id, :new_category_name, :working_hours_id, :day_of_week,:open, :close)
   end
   def set_master
   @master = Master.find(params[:id])
