@@ -1,7 +1,7 @@
 .card
-  .card-header
-    =t('common.category')
+  .card-header.h4
+    h4 = t('common.category')
   .card-body
     - Category.all.each do |category|
       .p
-      =link_to "#{category.name}", category_path(category)
+      =link_to "#{category.name}", category_path(category), class: "links"

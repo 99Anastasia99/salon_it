@@ -1,0 +1,9 @@
+I"Ž(function() {
+  jQuery(function() {
+    return $('#visit_master_id').change(function() {
+      return alert(1);
+    });
+  });
+
+}).call(this);
+:ET

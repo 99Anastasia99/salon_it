@@ -1,0 +1,15 @@
+.container
+  table.table.table-striped.table-bordered.table-list
+    tr.background-text-header
+      th= link_to "ФИО клиента", sort: "surname"
+      th= "Домашний адрес"
+      th= link_to "Дата рождения", sort: "date_of_birth"
+      th= link_to "Количество посещений", sort: "average_visits"
+      th= link_to "Суммарные траты", sort: "average_spending"
+    - Client.all.each do |client|
+      tr.background-text
+        td= link_to "#{client.surname} #{client.name} #{client.patronymic}", client_path(client), class:"links"
+        td= "#{client.country},#{client.region}, #{client.city}, #{client.street}, #{client.building} - #{client.flat}"
+        td= client.date_of_birth.to_s.split("00:00:00 +0300")[0]
+        td= client.total_visits
+        td= client.total_spending

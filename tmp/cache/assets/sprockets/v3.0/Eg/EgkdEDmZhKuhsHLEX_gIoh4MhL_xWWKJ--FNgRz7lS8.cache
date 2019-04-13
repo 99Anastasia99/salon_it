@@ -1,0 +1,15 @@
+I"1(function() {
+  jQuery(function() {
+    return $('#visit_master_id').change(function(e) {
+      var masterId;
+      masterId = $(e.target).val();
+      return $.ajax({
+        url: "/select"
+      }).done(function(html) {
+        return $("#results").append(html);
+      });
+    });
+  });
+
+}).call(this);
+:ET

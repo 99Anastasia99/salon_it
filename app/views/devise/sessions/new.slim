@@ -1,0 +1,13 @@
+.login_container
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .d-flex.justify-content-center.h-100
+      .login_card
+        .card-header.h4 align='center'
+          h4= t('common.sign_in')
+        .card-body
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail", class: "form-control"
+          br
+          = f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control"
+          br
+          .actions align='center'
+            = f.submit t('common.sign_in'),class: "btn btn-outline-warning btn-lg"

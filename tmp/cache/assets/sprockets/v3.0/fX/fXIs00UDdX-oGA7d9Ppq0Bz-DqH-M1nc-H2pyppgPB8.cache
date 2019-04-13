@@ -1,0 +1,9 @@
+I"’(function() {
+  jQuery(function() {
+    return $('#master_select').on("change", function() {
+      return alert(1);
+    });
+  });
+
+}).call(this);
+:ET

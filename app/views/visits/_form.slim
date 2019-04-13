@@ -10,15 +10,15 @@
             - visit.errors.full_messages.each do |message|
               li= message
       .field
+        = f.label :date_of_visit
+        = f.date_field :date_of_visit
+      .field
         = f.collection_select :client_id, Client.all,:id,:name,:prompt => "Select a Client"
         or create
         =link_to t('common.new_client'), new_client_path, class: "btn btn-outline-info"
-      .field
-        = f.collection_select :master_id, Master.all,:id,:name,:prompt => "Select a Master"
+        .field
+          = f.collection_select :master_id, Master.all, :id, :name, prompt: "Select a Master", id: 'master_select'
       .field
         = f.collection_select :offers_list, Offer.all,:id,:name,:prompt => "Select an offer"
-      .field
-        = f.label :date_of_visit
-        = f.date_field :date_of_visit
       .actions
         = f.submit

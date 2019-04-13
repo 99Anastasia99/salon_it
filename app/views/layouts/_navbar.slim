@@ -14,7 +14,7 @@ body
                 = t('common.admin')
               .dropdown-menu aria-labelledby="navbarDropdown"
                 = link_to t('common.show_all_managers'), destroy_all_path(@user), class: "dropdown-item" if current_user.admin?
-                = link_to t('common.masters'), masters_path, class: "dropdown-item"
+                = link_to t('common.masters'), destroy_all_masters_path(@master), class: "dropdown-item"
                 = link_to t('common.offers'), offers_path, class: "dropdown-item"
           li.nav-item
             a.nav-link.disabled href="#"  Disabled

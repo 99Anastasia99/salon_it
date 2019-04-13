@@ -1,0 +1,21 @@
+#masters_table
+.container
+  = form_tag destroy_all_masters_path(@master), method: :get do
+    .col.col-xs-6.text-right
+      .btn-group.mr-2 aria-label=("First group") role="group"
+        = submit_tag t('common.delete'), class: "btn btn-outline-danger"
+        .margin
+          = link_to t('common.add_new'), new_master_path, class: "btn btn-outline-info"
+    br
+    table.table.table-striped.table-bordered.table-list
+      tr.background-text-header
+        th align="left" = check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
+        th= "Имя"
+        th= "Категория"
+        th= "Рабочее время"
+      - Master.all.each do |master|
+        tr.background-text
+          td align="left" = check_box_tag "master_ids[]", master.id
+          td=  best_in_place master,:name, :as => :input, id: "name"
+          td= master.category.name
+          td= "#{master.open} - #{master.close}"

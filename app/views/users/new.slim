@@ -1,23 +1,21 @@
-- if current_user.admin?
-  = form_for User.new , url: create_by_owner_path do |f|
-    .field
-      = f.label :name
-      br/
-      = f.text_field :name, autofocus: true, autocomplete: "name"
-    .field
-      = f.label :email
-      br/
-      = f.email_field :email, autofocus: true, autocomplete: "email"
-    .field
-      = f.label :password
-      - if @minimum_password_length
-        em
-          | (#{@minimum_password_length} characters minimum)
-      br/
-      = f.password_field :password, autocomplete: "new-password"
-    .field
-      = f.label :password_confirmation
-      br/
-      = f.password_field :password_confirmation, autocomplete: "new-password"
-    .actions
-      = f.submit "Sign up"
+
+.login_container
+  .d-flex.justify-content-center.h-200
+    .login_card
+      .card-header.h4 align='center'
+        h3= t('common.sign_up_by_owner')
+      .card-body
+        = form_for User.new , url: create_by_owner_path do |f|
+          = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name", class: "form-control"
+          br
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail", class: "form-control"
+          - if @minimum_password_length
+           em
+            | (#{@minimum_password_length} characters minimum)
+          br
+          = f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control"
+          br
+          = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class: "form-control"
+          br
+          .actions align='center'
+            = f.submit t('common.sign_up_by_owner'),class: "btn btn-outline-warning btn-sm"

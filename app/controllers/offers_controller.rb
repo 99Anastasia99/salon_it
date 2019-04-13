@@ -19,7 +19,7 @@ end
   end
   private
   def offer_params
-    params.require(:offer).permit(:name,:description,:duration,:price, :category_id, :new_category_name)
+    params.require(:offer).permit(:name,:description,:duration,:price,:master_id, :category_id, :new_category_name)
   end
   def set_offer
   @offer = Offer.find(params[:id])

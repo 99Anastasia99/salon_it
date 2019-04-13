@@ -10,6 +10,9 @@ class ClientsController < ApplicationController
         redirect_to root_path
     end
   end
+  def index
+  @clients = Client.order(sort_column + " " + sort_direction)
+  end
   def show
   end
   private
@@ -18,5 +21,12 @@ class ClientsController < ApplicationController
   end
   def set_client
   @client = Client.find(params[:id])
+  end
+  def sort_column
+    Client.column_names.include?(params[:sort]) ? params[:sort] : "surname"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end

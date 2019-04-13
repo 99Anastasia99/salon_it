@@ -13,3 +13,63 @@
  *= require jquery-ui/datepicker
  */
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+.background-text{
+ color: rgb(224, 192, 210);
+ font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.background-text-header{
+ color: rgb(252, 227, 241);
+ font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.login_container{
+height: 100%;
+align-content: center;
+}
+.card{
+  background-color: rgba(0,0,0,0.5) !important;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.login_card{
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+.h4{
+color: white;
+}
+.login_card-header h4{
+color: white;
+}
+.widget{
+  width: 200px;
+  margin-top: auto;
+}
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.margin{
+margin-left: 4px;
+}

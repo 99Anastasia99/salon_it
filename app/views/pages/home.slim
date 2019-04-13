@@ -1,15 +1,9 @@
-.container
-  .row
-    .col-md-8
-      =link_to 'destroy', destroy_all_path(@user)
+.row
+    .col-md-10
       - if current_user and current_user.admin?
-      - Client.all.each do |client|
-        p
-        = client.name
-        br= client.patronymic
-        br= client.surname
-        br= client.date_of_birth.to_s.split("00:00:00 +0300")[0]
+        =link_to "clients", clients_path
 
-    .col-md-4
+    .widget
       =render 'add_widget'
+      br
       =render 'category_widget'
