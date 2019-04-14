@@ -3,19 +3,25 @@
   = form_tag destroy_all_masters_path(@master), method: :get do
     .col.col-xs-6.text-right
       .btn-group.mr-2 aria-label=("First group") role="group"
-        = submit_tag t('common.delete'), class: "btn btn-outline-danger"
-        .margin
-          = link_to t('common.add_new'), new_master_path, class: "btn btn-outline-info"
+          = submit_tag t('common.delete'), class: "btn btn-outline-danger"
+          .margin
+            = link_to t('common.add_new'), new_master_path, class: "btn btn-outline-light"
     br
     table.table.table-striped.table-bordered.table-list
       tr.background-text-header
         th align="left" = check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
-        th= "Имя"
-        th= "Категория"
-        th= "Рабочее время"
+        th= t('common.name')
+        th= t('common.surname')
+        th= t('common.patronymic')
+        th= t('common.category')
+        th= t('common.working_hours')
+        th= t('common.actions')
       - Master.all.each do |master|
         tr.background-text
           td align="left" = check_box_tag "master_ids[]", master.id
           td=  best_in_place master,:name, :as => :input, id: "name"
+          td=  best_in_place master,:surname, :as => :input, id: "surname"
+          td=  best_in_place master,:patronymmic, :as => :input, id: "patronymmic"
           td= master.category.name
-          td= "#{master.open} - #{master.close}"
+          td= "#{master.current_time(master.open_time)} - #{master.current_time(master.close_time)}"
+          td= link_to t('common.edit'), edit_master_path(master), class: "btn btn-outline-light"

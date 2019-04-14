@@ -7,12 +7,21 @@ class MastersController < ApplicationController
   def destroy
     @master=Master.where(id: params[:@master_ids])
     @master.destroy_all
-end
+  end
+  def edit
+    @master =  Master.find(params[:id])
+  end
+  def show
+    @masters = Master.all
+  end
   def create
     @master = Master.new(master_params)
     if @master.save
         flash[:success] = "Master #{@master.name} has been added."
-        redirect_to root_path
+        redirect_to destroy_all_masters_path(@master)
+    else
+      format.html { render :new }
+      format.json { render json: @master.errors, status: :unprocessable_entity }
     end
   end
   def destroy_all_masters
@@ -29,7 +38,7 @@ end
   end
   private
   def master_params
-    params.require(:master).permit(:name,:patronymmic,:surname, :category_id, :new_category_name, :working_hours_id, :day_of_week,:open, :close)
+    params.require(:master).permit(:open_time,:close_time,:name,:patronymmic,:surname, :category_id, :new_category_name)
   end
   def set_master
   @master = Master.find(params[:id])

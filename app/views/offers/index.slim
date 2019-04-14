@@ -1,19 +1,26 @@
-#offers_table
-table.table.table-striped.table-bordered.table-list
-  tr
-    th align="center" = check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
-    th= "Название"
-    th= "Описание"
-    th= "Категория"
-    th= "Продолжительность"
-    th= "Цена, руб"
-    th= "Action"
-  - @offers.each do |offer|
-    tr
-      td align="center" = check_box_tag "master_ids[]", offer.id
-      td= link_to "#{offer.name}", offer_path(offer)
-      td= offer.description
-      td= offer.category.name
-      td= offer.duration
-      td= offer.price
-      td= link_to   t('common.destroy'), offer, class:"dropdown-item align-middle" , method: :delete, data: { confirm: 'Are you sure?' }
+.container
+  = form_tag destroy_all_offers_path(@offer), method: :get do
+    .col.col-xs-6.text-right
+      .btn-group.mr-2 aria-label=("First group") role="group"
+        = submit_tag t('common.delete'), class: "btn btn-outline-danger"
+        .margin
+          = link_to t('common.add_new'), new_offer_path, class: "btn btn-outline-light"
+    br
+    table.table.table-striped.table-bordered.table-list
+      tr.background-text-header
+        th align="center" = check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
+        th= "Название"
+        th= "Описание"
+        th= "Категория"
+        th= "Продолжительность"
+        th= "Цена, руб"
+        th= "Action"
+      - Offer.all.each do |offer|
+        tr.background-text
+          td align="center" = check_box_tag "offer_ids[]", offer.id
+          td= best_in_place offer, :name, as: :input, id: "name"
+          td= best_in_place offer, :description, as: :input, id: "name"
+          td= offer.category.name
+          td= offer.current_time
+          td= best_in_place offer, :price,as: :input, id: "name"
+          td= link_to t('common.edit'), edit_offer_path(offer), class: "btn btn-outline-light"

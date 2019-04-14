@@ -1,4 +1,4 @@
-<%= form_for(master) do |f| %>
+<%= form_for(master)  do |f| %>
 <div class="container">
   <% if master.errors.any? %>
     <div id="error_explanation">
@@ -10,43 +10,39 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="card background-text">
+ <div class="container">
+  <div>
+    <%= f.label :name  %>
+    <%= f.text_field :name, class:"form-control "  %>
   </div>
-  <div class="field">
-    <%= f.label :patronymmic %>
-    <%= f.text_field :patronymmic%>
+  <div>
+    <%= f.label :patronymic  %>
+    <%= f.text_field :patronymmic,class:"form-control " %>
   </div>
-  <div class="field">
-    <%= f.label :surname %>
-    <%= f.text_field :surname%>
+  <div>
+    <%= f.label :surname  %>
+    <%= f.text_field :surname, class:"form-control "%>
   </div>
-  <p>
+  <div >
+    <%= f.label :open_time %>
+    <%= f.time_field :open_time, value: ("%H:%M") %>
+  </div>
+  <div >
+    <%= f.label :close_time  %>
+    <%= f.time_field :close_time, value: ("%H:%M") %>
+  </div>
+  <p align="center">
     <label for="master_category_id">Category:</label><br />
-    <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => "Select a Category" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, prompt: "Select a Category" %>
     or create one:
     <%= f.text_field :new_category_name %>
   </p>
 
- <div class="container">
-  <div class="row">
-    <div class="col">
-    <table class="table table-striped table-bordered table-list">
-      <tr>
-        <th> Начало работы</th>
-        <th> Конец работы</th>
-      </tr>
-      <tr>
-        <td><%= f.text_field :open, id: "working_hours" %></td>
-        <td><%= f.text_field :close, id: "working_hours"%></td>
-      </table>
-      </div>
-      </div>
-      </div>
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('common.create_master') %>
+  </div>
+  </div>
   </div>
 </div>
 <% end %>

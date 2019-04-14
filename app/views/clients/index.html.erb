@@ -1,0 +1,23 @@
+<div class="container">
+<div class="col-md-10">
+<%= form_for_filterrific @filterrific do |f| %>
+<div class="row">
+    <div class="margin">
+      <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
+      <%= f.text_field :search_query,  class: 'filterrific-periodically-observed form-control', placeholder: "Search"%>
+    </div >
+    <div class="margin">
+      <%= f.text_field :average_visits, class: "filterrific-periodically-observed form-control margin-left: 5px", placeholder: "Visits more than"  %>
+    </div>
+    <div class="margin">
+      <%= f.text_field :average_spending,class: 'filterrific-periodically-observed form-control', placeholder: "Spendings more than" %>
+    </div>
+    <div>
+      <%= link_to 'Reset filters',  reset_filterrific_url, class: "btn btn-outline-light" %>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
+<br>
+  <%= render 'clients_table', clients: @clients %>

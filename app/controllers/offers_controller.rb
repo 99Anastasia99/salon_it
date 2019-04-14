@@ -1,17 +1,28 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: [:show,:destroy]
+  before_action :set_offer, only: [:show,:edit,:destroy]
   respond_to :html, :json
   def new
     @offer = Offer.new
   end
-  def destroy
-    @offer.destroy
-end
+  def destroy_all_offers
+    @offer= Offer.where(id: params[:offer_ids])
+    @offer.destroy_all
+    redirect_to offers_path
+  end
+  def edit
+  end
+  def update
+    @offer = Offer.find(params[:id])
+    @offer.update_attributes(offer_params)
+    redirect_to offers_path
+  end
   def create
     @offer = Offer.new(offer_params)
     if @offer.save
         flash[:success] = "offer #{@offer.name} has been added."
-        redirect_to root_path
+        redirect_to offers_path
+      else
+        redirect_to new_offer_path
     end
   end
   def index

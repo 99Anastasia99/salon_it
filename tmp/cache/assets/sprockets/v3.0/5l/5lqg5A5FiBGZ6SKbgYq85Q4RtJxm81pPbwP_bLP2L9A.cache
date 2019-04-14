@@ -1,0 +1,9 @@
+I"~(function() {
+  jQuery(function() {
+    return $('#new').timepicker({
+      timeFormat: 'hh-mm'
+    });
+  });
+
+}).call(this);
+:ET

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_10_183409) do
+ActiveRecord::Schema.define(version: 2019_04_14_183718) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -35,21 +35,29 @@ ActiveRecord::Schema.define(version: 2019_04_10_183409) do
     t.integer "flat"
   end
 
+  create_table "day_of_weeks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name_of_day"
+    t.bigint "master_id"
+    t.index ["master_id"], name: "index_day_of_weeks_on_master_id"
+  end
+
   create_table "masters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.bigint "category_id"
     t.string "surname"
     t.string "patronymmic"
+    t.time "open_time"
+    t.time "close_time"
     t.index ["category_id"], name: "index_masters_on_category_id"
   end
 
   create_table "offers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.float "price"
-    t.time "duration"
     t.string "name"
     t.string "description"
     t.bigint "master_id"
     t.bigint "category_id"
+    t.time "duration"
     t.index ["category_id"], name: "index_offers_on_category_id"
     t.index ["master_id"], name: "index_offers_on_master_id"
   end
@@ -86,7 +94,10 @@ ActiveRecord::Schema.define(version: 2019_04_10_183409) do
     t.bigint "masters_id"
     t.time "open"
     t.time "close"
-    t.integer "day_of_week"
+    t.bigint "master_id"
+    t.bigint "day_of_week_id"
+    t.index ["day_of_week_id"], name: "index_working_hours_on_day_of_week_id"
+    t.index ["master_id"], name: "index_working_hours_on_master_id"
     t.index ["masters_id"], name: "index_working_hours_on_masters_id"
   end
 

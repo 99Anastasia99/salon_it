@@ -38,7 +38,7 @@ class Client < ApplicationRecord
  scope :average_visits, lambda {|reference_time|
   where("clients.average_visits >= ?", reference_time)
 }
-scope :average_spending, ->(reference_time) {
+scope :average_spending, lambda {|reference_time|
  where("clients.average_spending >= ?", reference_time)
 }
  scope :sorted_by, lambda  {|sort_option|
@@ -49,9 +49,9 @@ scope :average_spending, ->(reference_time) {
   when /^date_of_birth_/
     order("clients.date_of_birth #{direction}")
   when /^average_visits_/
-    order("clients.average_visits) #{direction}")
+    order("clients.average_visits #{direction}")
   when /^average_spending_/
-    order("clients.average_spending) #{direction}")
+    order("clients.average_spending #{direction}")
   else
     raise(ArgumentError, "Invalid sort option: #{sort_option.inspect}")
   end

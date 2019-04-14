@@ -10,8 +10,29 @@ class ClientsController < ApplicationController
         redirect_to root_path
     end
   end
+  def update
+    @client = Client.find(params[:id])
+    @client.update_attributes(client_params)
+    respond_with @client
+  end
   def index
-  @clients = Client.order(sort_column + " " + sort_direction)
+  @filterrific = initialize_filterrific(
+      Client,
+      params[:filterrific],
+       persistence_id: 'shared_key',
+       default_filter_params: {},
+       available_filters: [:sorted_by, :average_visits, :average_spending, :search_query],
+       sanitize_params: true
+        ) or return
+     @clients = @filterrific.find.page(params[:page])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  rescue ActiveRecord::RecordNotFound => e
+  # There is an issue with the persisted param_set. Reset it.
+  puts "Had to reset filterrific params: #{e.message}"
+  redirect_to(reset_filterrific_url(format: :html)) && return
   end
   def show
   end
@@ -21,12 +42,5 @@ class ClientsController < ApplicationController
   end
   def set_client
   @client = Client.find(params[:id])
-  end
-  def sort_column
-    Client.column_names.include?(params[:sort]) ? params[:sort] : "surname"
-  end
-  
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end

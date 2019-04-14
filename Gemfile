@@ -7,6 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
 gem 'filterrific'
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'best_in_place', '~> 3.1', '>= 3.1.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
