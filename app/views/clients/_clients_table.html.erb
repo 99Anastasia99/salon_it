@@ -9,6 +9,7 @@
                     <th class="table-text"><%= t('lecture_note_form.address') %></th>
                     <th><%= filterrific_sorting_link(@filterrific, :date_of_birth, label: t('lecture_note_form.date_of_birth')) %></th>
                     <th><%= filterrific_sorting_link(@filterrific, :average_visits, label: t('lecture_notes_table.average_visits')) %></th>
+                    <th><%= filterrific_sorting_link(@filterrific, :latest_date_of_visit, label: t('lecture_notes_table.latest_date_of_visit')) %></th>
                     <th><%= filterrific_sorting_link(@filterrific, :average_spending, label: t('lecture_notes_table.average_spending')) %></th>
                   </tr>
                 </thead>
@@ -16,11 +17,12 @@
                 <tbody>
                   <% clients.each do |client| %>
                   <tr class="background-text-header">
-                    <td style= "width: 180px" class="table-text"><%= link_to client.surname, client %></td>
+                    <td style= "width: 180px" class="table-text links"><%= link_to "#{client.surname} #{client.name} #{client.patronymic}",client, class: "links" %></td>
                     <td class="table-text"><%= "#{client.country},#{client.region}, #{client.city}, #{client.street}, #{client.building} - #{client.flat}" %></td>
                     <td style= "width: 175px" class="table-text"><%= client.birthday %></td>
-                    <td style= "width: 175px" class="table-text"><%= client.average_visits %></td>
-                    <td style= "width: 175px" class="table-text"><%= client.average_spending %></td>
+                    <td style= "width: 175px" class="table-text"><%= client.total_visits %></td>
+                    <td style= "width: 175px" class="table-text"><%= client.latest_date_of_visit %></td>
+                    <td style= "width: 175px" class="table-text"><%= client.total_spending %></td>
                   </tr>
                   <% end %>
                 </tbody>

@@ -2,19 +2,31 @@ class Client < ApplicationRecord
   has_many :visits, dependent: :destroy
   def total_visits
     average_visits = self.visits.count
-    self.update(:average_visits => average_visits)
+    self.update(average_visits: average_visits)
     return average_visits
   end
   def birthday
     self.date_of_birth.strftime("%Y-%d-%m")
   end
   def total_spending
-    average_spending = 0.0
-    self.visits.each do |visit|
-      average_spending += visit.price
+    average=0.0
+    self.visits.all.each do |visit|
+      average+= visit.total_price
     end
-    self.update(:average_spending => average_spending)
-    return average_spending
+    self.update(average_spending: average)
+    return average
+  end
+  def latest_date_of_visit
+    if self.visits.exists?
+      date_of_visit_last = self.visits.last.date_of_visit
+    self.visits.each do |visit|
+      if visit.date_of_visit > date_of_visit_last
+        date_of_visit_last = visit.date_of_visit
+      end
+     end
+     self.update(latest_date_of_visit: date_of_visit_last)
+     return date_of_visit_last
+    end
   end
   filterrific(
      default_filter_params: { sorted_by: 'average_spending_desc' },
@@ -52,6 +64,8 @@ scope :average_spending, lambda {|reference_time|
     order("clients.average_visits #{direction}")
   when /^average_spending_/
     order("clients.average_spending #{direction}")
+  when /^latest_date_of_visit/
+    order("clients.latest_date_of_visit #{direction}")
   else
     raise(ArgumentError, "Invalid sort option: #{sort_option.inspect}")
   end

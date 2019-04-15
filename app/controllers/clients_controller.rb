@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show,:destroy]
+  respond_to :html, :json,:js
   def new
     @client = Client.new
   end
@@ -36,11 +37,11 @@ class ClientsController < ApplicationController
   end
   def show
   end
+end
   private
   def client_params
-    params.require(:client).permit(:name,:patronymic,:surname,:country,:region,:city,:street,:building,:flat,:average_spending,:average_visits,:date_of_birth)
+    params.require(:client).permit(:latest_date_of_visit,:name,:patronymic,:surname,:country,:region,:city,:street,:building,:flat,:average_spending,:average_visits,:date_of_birth)
   end
   def set_client
   @client = Client.find(params[:id])
   end
-end

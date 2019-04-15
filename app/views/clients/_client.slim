@@ -1,0 +1,14 @@
+#clients data-remote="true"
+  table.table.table-striped.table-bordered.table-list
+    tr.background-text-header
+      th= "ФИО клиента"
+      th= "Домашний адрес"
+      th= "Количество посещений"
+      th= "Дата последнего посещения"
+      th= "Суммарные траты"
+    tr.background-text
+      td= "#{@client.surname} #{@client.name} #{@client.patronymic}"
+      td= "#{@client.country},#{@client.region}, #{@client.city}, #{@client.street}, #{@client.building} - #{@client.flat}"
+      td= @client.total_visits
+      td= @client.latest_date_of_visit
+      td= @client.total_spending

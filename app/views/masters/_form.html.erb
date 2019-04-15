@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+  <div class="col-md-6">
   <div class="card background-text">
  <div class="container">
   <div>
@@ -26,11 +27,11 @@
   </div>
   <div >
     <%= f.label :open_time %>
-    <%= f.time_field :open_time, value: ("%H:%M") %>
+    <%= f.time_field :open_time, value: ("%H:%M"), class:"form-control" %>
   </div>
   <div >
     <%= f.label :close_time  %>
-    <%= f.time_field :close_time, value: ("%H:%M") %>
+    <%= f.time_field :close_time, value: ("%H:%M"),class:"form-control" %>
   </div>
   <p align="center">
     <label for="master_category_id">Category:</label><br />
@@ -41,6 +42,7 @@
 
   <div class="actions">
     <%= f.submit t('common.create_master') %>
+    </div>
   </div>
   </div>
   </div>

@@ -15,4 +15,4 @@
           td align="left" = check_box_tag "master_ids[]", master.id
           td=  best_in_place master,:name, :as => :input, id: "name"
           td= master.category.name
-          td= "#{master.open} - #{master.close}"
+          td= "#{master.current_time(master.open_time)} - #{master.current_time(master.open_time)}"

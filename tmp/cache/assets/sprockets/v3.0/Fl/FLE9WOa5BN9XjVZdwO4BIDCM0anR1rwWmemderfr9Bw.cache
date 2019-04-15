@@ -1,0 +1,9 @@
+I"‚(function() {
+  $.ajax({
+    url: "/show"
+  }).done(function(html) {
+    return $("#clients").append(html);
+  });
+
+}).call(this);
+:ET

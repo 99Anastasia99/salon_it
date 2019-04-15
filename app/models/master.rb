@@ -8,7 +8,9 @@ class Master < ApplicationRecord
   before_save :create_category_from_name
   enum day_of_week: [:Monday, :Tuesday, :Wednesday, :thursday, :friday, :saturday, :sunday]
   def current_time(params)
+    if !params.blank?
     params.strftime("%H:%M")
+  end
   end
   def create_category_from_name
     create_category(name: new_category_name) unless new_category_name.blank?

@@ -5,7 +5,7 @@ class Visit < ApplicationRecord
   def total_price
       @offer =  Offer.find(self.offers_list)
       price = @offer.price
-      self.update(:price => price)
+      self.update(price: price)
       return price
     end
 end
