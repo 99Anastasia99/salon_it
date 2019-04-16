@@ -1,8 +1,8 @@
 <%= form_for(master)  do |f| %>
 <div class="container">
   <% if master.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(master.errors.count, "error") %> prohibited this master from being saved:</h2>
+    <div id="error_explanation" class="background-text">
+      <h6><%= pluralize(master.errors.count, "error") %> prohibited this master from being saved:</h6>
       <ul>
       <% master.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,40 +10,41 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-md-6">
   <div class="card background-text">
  <div class="container">
-  <div>
+   <div class="form-group mx-sm-3 mb-2">
+  <div align="center">
     <%= f.label :name  %>
     <%= f.text_field :name, class:"form-control "  %>
   </div>
-  <div>
+  <div align="center">
     <%= f.label :patronymic  %>
     <%= f.text_field :patronymmic,class:"form-control " %>
   </div>
-  <div>
+  <div align="center">
     <%= f.label :surname  %>
     <%= f.text_field :surname, class:"form-control "%>
   </div>
-  <div >
+  <div align="center" >
     <%= f.label :open_time %>
     <%= f.time_field :open_time, value: ("%H:%M"), class:"form-control" %>
   </div>
-  <div >
-    <%= f.label :close_time  %>
+  <div align="center" >
+    <%= f.label :close_time %>
     <%= f.time_field :close_time, value: ("%H:%M"),class:"form-control" %>
+  </div>
   </div>
   <p align="center">
     <label for="master_category_id">Category:</label><br />
     <%= f.collection_select :category_id, Category.all, :id, :name, prompt: "Select a Category" %>
     or create one:
-    <%= f.text_field :new_category_name %>
+    <%= f.text_field :new_category_name%>
   </p>
 
-  <div class="actions">
-    <%= f.submit t('common.create_master') %>
+  <div class="actions" align="center">
+    <%= f.submit t('common.create'), class: "btn btn-warning"%>
     </div>
-  </div>
+    <br>
   </div>
   </div>
 </div>

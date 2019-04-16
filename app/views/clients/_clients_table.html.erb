@@ -1,28 +1,35 @@
+<%= form_tag destroy_all_clients_path(@client), method: :get do %>
 <div class= "container">
 <div class="panel panel-default panel-table" id="filterrific_results">
-
             <div class="panel-body">
               <table class="table table-striped table-bordered table-list">
                 <thead>
                   <tr class="links">
-                    <th><%= filterrific_sorting_link(@filterrific, :surname, label: t('lecture_note_form.FIO'))%></th>
-                    <th class="table-text"><%= t('lecture_note_form.address') %></th>
-                    <th><%= filterrific_sorting_link(@filterrific, :date_of_birth, label: t('lecture_note_form.date_of_birth')) %></th>
-                    <th><%= filterrific_sorting_link(@filterrific, :average_visits, label: t('lecture_notes_table.average_visits')) %></th>
-                    <th><%= filterrific_sorting_link(@filterrific, :latest_date_of_visit, label: t('lecture_notes_table.latest_date_of_visit')) %></th>
-                    <th><%= filterrific_sorting_link(@filterrific, :average_spending, label: t('lecture_notes_table.average_spending')) %></th>
+                    <th><%= check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);") %></th>
+                    <th><%= filterrific_sorting_link(@filterrific, :surname, label: "ФИО клиента")%></th>
+                    <th class="table-text"> Домашний адрес клиента</th>
+                    <th><%= filterrific_sorting_link(@filterrific, :date_of_birth, label:"Дата рождения" ) %></th>
+                    <th><%= filterrific_sorting_link(@filterrific, :phone_number, label: "Номер телефона") %></th>
+                    <th><%= filterrific_sorting_link(@filterrific, :average_visits, label: "Количество посещений") %></th>
+                    <th><%= filterrific_sorting_link(@filterrific, :latest_date_of_visit, label: "Дата последнего визита") %></th>
+                    <th><%= filterrific_sorting_link(@filterrific, :average_spending, label: "Общие траты") %></th>
+                    <th><%= submit_tag t('common.delete'), class: "btn btn-outline-danger margin" %></th>
+
                   </tr>
                 </thead>
 
                 <tbody>
                   <% clients.each do |client| %>
-                  <tr class="background-text-header">
+                  <tr class="links">
+                    <td align="left"><%= check_box_tag "client_ids[]", client.id %></td>
                     <td style= "width: 180px" class="table-text links"><%= link_to "#{client.surname} #{client.name} #{client.patronymic}",client, class: "links" %></td>
                     <td class="table-text"><%= "#{client.country},#{client.region}, #{client.city}, #{client.street}, #{client.building} - #{client.flat}" %></td>
                     <td style= "width: 175px" class="table-text"><%= client.birthday %></td>
+                    <td style= "width: 175px" class="table-text"><%= client.phone_number %></td>
                     <td style= "width: 175px" class="table-text"><%= client.total_visits %></td>
                     <td style= "width: 175px" class="table-text"><%= client.latest_date_of_visit %></td>
                     <td style= "width: 175px" class="table-text"><%= client.total_spending %></td>
+                    <td> <%= link_to t('common.edit'), edit_client_path(client), class: "btn btn-outline-light" %>
                   </tr>
                   <% end %>
                 </tbody>
@@ -30,4 +37,5 @@
             </div>
             </div>
           </div>
+          <% end %>
 <%= will_paginate clients %>

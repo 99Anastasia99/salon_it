@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_171948) do
+ActiveRecord::Schema.define(version: 2019_04_16_162653) do
 
   create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "master_id"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2019_04_15_171948) do
     t.bigint "offer_id"
     t.time "start_time"
     t.time "end_time"
+    t.time "master_work_open_time"
+    t.time "master_work_close_time"
     t.integer "duration"
     t.string "color"
     t.index ["client_id"], name: "index_bookings_on_client_id"
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_04_15_171948) do
     t.string "building"
     t.integer "flat"
     t.date "latest_date_of_visit"
+    t.string "phone_number"
   end
 
   create_table "day_of_weeks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|

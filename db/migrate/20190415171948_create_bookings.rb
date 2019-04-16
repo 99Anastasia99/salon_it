@@ -6,6 +6,8 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.belongs_to :offer
       t.time :start_time
       t.time :end_time
+      t.time :master_work_open_time
+      t.time :master_work_close_time
       t.integer :duration
       t.string :color
     end

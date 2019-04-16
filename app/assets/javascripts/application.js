@@ -23,13 +23,12 @@
 //= require_tree .
 //= require jquery
 //= require best_in_place
-
+//= require jquery-ui
+//= require jquery-mask-plugin
+//= require filterrific/filterrific-jquery
 //= require moment
 //= require fullcalendar
-//= require jquery-ui
-
-//= require filterrific/filterrific-jquery
-
+$.jMaskGlobals.watchDataMask = true;
 $(document).ready(function() {
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
@@ -48,3 +47,34 @@ function checkAll(check_all) {
 		}
 	}
 }
+
+function eventCalendar() {
+  return $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    selectable: true,
+    selectHelper: true,
+    editable: true,
+    eventLimit: true,
+    events: '/bookings.json',
+    select: function(start_time, end_time) {
+      $.getScript('/bookings/new', function() {
+        $('.start_hidden').val(moment(start_time).format('YYYY-MM-DD HH:mm'));
+        $('.end_hidden').val(moment(end_time).format('YYYY-MM-DD HH:mm'));
+      });
+
+      calendar.fullCalendar('unselect');
+    }
+   });
+};
+function clearCalendar() {
+  $('#calendar').fullCalendar('delete');
+  $('#calendar').html('');
+};
+$(document).on('turbolinks:load', function(){
+  eventCalendar();
+});
+ $(document).on('turbolinks:before-cache', clearCalendar);

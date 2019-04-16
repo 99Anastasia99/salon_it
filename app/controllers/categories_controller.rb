@@ -4,6 +4,9 @@ class CategoriesController < ApplicationController
   def new
   @category = Category.new
   end
+  def index
+    redirect_to new_category_path
+  end
   def show
     @masters = @category.masters
     @offers = @category.offers
@@ -25,7 +28,12 @@ class CategoriesController < ApplicationController
     if @category.save
         flash[:success] = "category #{@category.name} has been added."
         redirect_to root_path
+    else
+      respond_to do |format|
+      format.html { render :new }
+      format.json { render json: @category.errors, status: :unprocessable_entity }
     end
+  end
   end
   private
   def category_params

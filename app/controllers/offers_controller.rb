@@ -22,7 +22,10 @@ class OffersController < ApplicationController
         flash[:success] = "offer #{@offer.name} has been added."
         redirect_to offers_path
       else
-        redirect_to new_offer_path
+        respond_to do |format|
+        format.html { render :new }
+        format.json { render json: @offer.errors, status: :unprocessable_entity }
+      end
     end
   end
   def index

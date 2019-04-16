@@ -8,8 +8,21 @@ class ClientsController < ApplicationController
     @client = Client.new(client_params)
     if @client.save
         flash[:success] = "Master #{@client.name} has been added."
-        redirect_to root_path
+        redirect_to clients_path
+      else
+        respond_to do |format|
+        format.html { render :new }
+        format.json { render json: @client.errors, status: :unprocessable_entity }
+      end
     end
+  end
+  def edit
+      @client = Client.find(params[:id])
+  end
+  def destroy_all_clients
+    @client=Client.where(id: params[:client_ids])
+    @client.destroy_all
+    redirect_to clients_path
   end
   def update
     @client = Client.find(params[:id])
@@ -40,7 +53,7 @@ class ClientsController < ApplicationController
 end
   private
   def client_params
-    params.require(:client).permit(:latest_date_of_visit,:name,:patronymic,:surname,:country,:region,:city,:street,:building,:flat,:average_spending,:average_visits,:date_of_birth)
+    params.require(:client).permit(:phone_number,:latest_date_of_visit,:name,:patronymic,:surname,:country,:region,:city,:street,:building,:flat,:average_spending,:average_visits,:date_of_birth)
   end
   def set_client
   @client = Client.find(params[:id])

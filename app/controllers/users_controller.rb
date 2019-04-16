@@ -7,6 +7,11 @@ class UsersController < ApplicationController
        if @user.save
            flash[:success] = "Manager #{@user.name} has been created."
            redirect_to root_path
+         else
+           respond_to do |format|
+           format.html { render :new }
+           format.json { render json: @user.errors, status: :unprocessable_entity }
+         end
        end
   end
   def new

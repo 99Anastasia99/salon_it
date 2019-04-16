@@ -16,13 +16,16 @@ class MastersController < ApplicationController
   end
   def create
     @master = Master.new(master_params)
+
     if @master.save
         flash[:success] = "Master #{@master.name} has been added."
         redirect_to destroy_all_masters_path(@master)
     else
+      respond_to do |format|
       format.html { render :new }
       format.json { render json: @master.errors, status: :unprocessable_entity }
     end
+  end
   end
   def destroy_all_masters
     @master=Master.where(id: params[:master_ids])

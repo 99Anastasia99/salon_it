@@ -1,4 +1,6 @@
 class Offer < ApplicationRecord
+  validates :name,:description, length: {maximum: 20}, presence: true, uniqueness: { scope: :name, message: "must be unique " }
+  validates :duration,presence: true
   belongs_to :category, optional: true
   belongs_to :master, optional: true
   belongs_to :client,optional: true

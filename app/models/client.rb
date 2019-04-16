@@ -1,5 +1,11 @@
 class Client < ApplicationRecord
   has_many :visits, dependent: :destroy
+  validates :name,:surname,:patronymic,:country,:street,:region,length: {maximum: 20}, presence: true
+  validates_format_of :phone_number, with: /[+](\d{3})[(](\d{2})[)](\d{3})[-](\d{2})[-](\d{2})/, on: :create
+  validates :date_of_birth, presence: true, if: :older?, on: create
+  def older?
+    self.date_of_birth < (Date.now - 10.years)
+  end
   def total_visits
     average_visits = self.visits.count
     self.update(average_visits: average_visits)
@@ -39,10 +45,10 @@ class Client < ApplicationRecord
    terms = terms.map { |e|
      (e.tr("*", "%") + "%").gsub(/%+/, "%")
    }
-   num_or_conds = 3
+   num_or_conds = 4
    where(
      terms.map { |_term|
-       "(LOWER(clients.name) LIKE ? OR LOWER(clients.surname) LIKE ? OR LOWER(clients.patronymic) LIKE ?)"
+       "(LOWER(clients.name) LIKE ? OR LOWER(clients.surname) LIKE ? OR LOWER(clients.patronymic) LIKE ? OR clients.phone_number lIKE ?)"
      }.join(" AND "),
      *terms.map { |e| [e] * num_or_conds }.flatten,
    )

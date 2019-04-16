@@ -1,0 +1,7 @@
+I"q(function() {
+  $("#client_phone_number").inputmask({
+    "mask": "+375(99) 999-9999"
+  });
+
+}).call(this);
+:ET

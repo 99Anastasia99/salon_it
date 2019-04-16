@@ -11,7 +11,8 @@
 
             <div class="col col-xs-6 text-right">
               <div class="btn-group mr-2" role="group" aria-label="First group">
-                <%= submit_tag t('common.delete'), class: "btn btn-outline-danger" %>
+                <%= submit_tag t('common.delete'), class: "btn btn-outline-danger margin" %>
+                <%= link_to t('common.add_new'), new_user_path, class: "btn btn-outline-light" %>
               </div>
             </div>
           </div>
@@ -29,8 +30,8 @@
             <% User.where(admin: false).all.each do |user| %>
             <tr class="background-text">
               <td align="left"><%= check_box_tag "user_ids[]", user.id %></td>
-              <td><%= best_in_place user,:name, :as => :input, id: "name",:ok_button => 'Save', :cancel_button => 'Cancel' %></td>
-              <td><%= best_in_place user,:email, :as => :input, id: "email",:ok_button => 'Save', :cancel_button => 'Cancel' %></td>
+              <td><%= best_in_place user,:name, as: :input, id: "name" %></td>
+              <td><%= best_in_place user,:email, as: :input, id: "email"%></td>
             </tr>
             <% end %>
           </tbody>

@@ -1,4 +1,4 @@
-#new
+.card.background-text
   = form_for(client) do |f|
     .container
       - if client.errors.any?
@@ -9,35 +9,36 @@
             ul
             - client.errors.full_messages.each do |message|
               li= message
-      .field
-        = f.label :name
-        = f.text_field :name
-      .field
-        = f.label :patronymic
-        = f.text_field :patronymic
-      .field
-        = f.label :surname
-        = f.text_field :surname
-      .field
-        = f.label :date_of_birth
-        = f.date_field :date_of_birth
-      .field
-        = f.label :country
-        = f.text_field :country
-      .field
-        = f.label :region
-        = f.text_field :region
-      .field
-        = f.label :city
-        = f.text_field :city
-      .field
-        = f.label :street
-        = f.text_field :street
-      .field
-        = f.label :building
-        = f.text_field :building
-      .field
-        = f.label :flat
-        = f.text_field :flat
-      .actions
-        = f.submit
+      .container
+        div align="center"
+          = f.label :name
+          = f.text_field :name, class: 'form-control'
+        div align="center"
+          = f.label :patronymic
+          = f.text_field :patronymic, class: 'form-control'
+        div align="center"
+          = f.label :surname
+          = f.text_field :surname, class: 'form-control'
+        div align="center"
+          = f.label :date_of_birth
+          = f.date_field :date_of_birth, class: 'form-control'
+        div align="center"
+          =f.label :phone_number
+          =f.text_field  :phone_number, class: 'form-control', 'data-mask': '+375(00)000-00-00', required: true
+        br
+        .row
+          .col-md-2
+          .margin= f.text_field :country, placeholder: "Country"
+          .margin= f.text_field :region, placeholder: "Region"
+        .row
+          .col-md-2
+          .margin= f.text_field :city, placeholder: "City"
+          .margin= f.text_field :street, placeholder: "Street"
+        .row
+          .col-md-2
+          .margin= f.text_field :building, placeholder: "Building"
+          .margin= f.text_field :flat, placeholder: "Flat"
+        br
+        .actions align="center"
+          = f.submit t('common.create'), class: "btn btn-warning"
+        br

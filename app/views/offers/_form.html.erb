@@ -1,52 +1,49 @@
-      <%= form_for(offer) do |f| %>
-        <% if offer.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
-            <ul>
-            <% offer.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-        <div class="field">
-          <%= f.label :name %>
-          <%= f.text_field :name %>
-        </div>
-        <p>
-          <div class="field">
-            <%= f.label :description %>
-            <%= f.text_field :description%>
-          </div>
-        </p>
-        <p>
-          <div class="field">
-            <%= f.label :duration %>
-            <%= f.time_field :duration,vale: "%H:%M"%>
-          </div>
-        </p>
-          <label for="master_category_id">Category:</label><br />
-          <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => "Select a Category",id: "category_id", :onchange => "myFunction()"%>
-          or create one:
-          <%= f.text_field :new_category_name, id: "category_id" %>
-          </p>
-          <p id="category_id"> </p>
-            <p>
-              <label for="master_category_id">Master:</label><br />
-              <%= f.collection_select :master_id, Master.all, :id, :name, :prompt => "Select a Master" %>
-              </p>
-            <div class="field">
-              <%= f.label :price %>
-              <%= f.text_field :price%>
-            </div>
-          </p>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
+<%= form_for(offer) do |f| %>
+<% if offer.errors.any? %>
+  <div id="error_explanation" class="background-text">
+    <h6 class="background=text"><%= pluralize(offer.errors.count, "error") %>
+      prohibited this offer from being saved:</h6>
+    <ul>
+      <% offer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
       <% end %>
-      <script>
-        function myFunction() {
-        var x = document.getElementById('category_id').value;
+    </ul>
+  </div>
+<% end %>
+<div class="card background-text">
+  <div class="container">
+  <div class="field" align="center">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="field" align="center">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "form-control"%>
+  </div>
 
-      }
-      </script>
+  <div class="field" align="center">
+    <%= f.label :duration %>
+    <%= f.time_field :duration,vale: "%H:%M",class: "form-control"%>
+  </div>
+    </div>
+  <p align="center">
+    <label for="master_category_id">Category:</label><br/>
+    <%= f.collection_select :category_id, Category.all, :id, :name, prompt: "Select a Category" %>
+    or create one:
+    <%= f.text_field :new_category_name%>
+  </p>
+
+  <p align="center">
+    <label for="master_category_id">Master:</label><br/>
+    <%= f.collection_select :master_id, Master.all, :id, :name, prompt: "Select a Master" %>
+  </p>
+  <p align="center">
+    <%= f.text_field :price, placeholder: "Price"%>
+  </p>
+  <br>
+  <div class="actions" align="center">
+    <%= f.submit t('common.create'), class: "btn btn-warning"%>
+  </div>
+  <br>
+<% end %>
+</div>

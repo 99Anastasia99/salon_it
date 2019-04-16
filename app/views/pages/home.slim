@@ -1,8 +1,12 @@
-.row
-    .col-md-10
-      - if current_user and current_user.admin?
-        =link_to "clients", clients_path
 
+.row
+    .col-md-2
+    .col-md-5
+      - if current_user and current_user.admin?
+        .h4 align="center" = 'Book a visit'
+        .card.background-text width="400px"
+          #calendar
+    .col-md-3
     .widget
       =render 'add_widget'
       br

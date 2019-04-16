@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
  def index
-   @bookings = Booking.where(start: params[:start_time]..params[:end_time])
+   @bookings = Booking.where(start_time: params[:start_time]..params[:end_time])
  end
 
  def show
@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
  end
 
  def create
-   @booking = Booking.new(booking_params)
+   @booking = @master.bookings.new(booking_params)
    @booking.save
  end
 
@@ -34,6 +34,6 @@ class BookingsController < ApplicationController
    end
 
    def booking_params
-     params.require(:booking).permit(:title, :date_range, :start, :end, :color)
+     params.require(:booking).permit(:master_id,:offer_id,:client_id,:start_time, :end_time, :color, :master_work_open_time,:master_work_close_time)
    end
 end

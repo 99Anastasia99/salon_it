@@ -1,13 +1,11 @@
 #masters_results
-  table.table.table-striped.table-bordered.table-list
+  table.table.table-striped.table-bordered.table-list.background-text-header
     tr
-      th align="center"= check_box_tag('check_all', 'check_all', false, :onClick => "checkAll(this);")
       th= "Имя"
       th= "Категория"
-      th =link_to t('common.add_new_master'), new_master_path, class: "btn btn-info"
+      th=link_to t('common.add_new_master'), new_master_path, class: "btn btn-outline-light"
     - @masters.each do |master|
       tr
-        td align="center" = check_box_tag "master_ids[]", master.id
-        td= link_to "#{master.name}", master_path(master)
+        td= link_to "#{master.name}", destroy_all_masters_path(master), class: "links"
         td= master.category.name
-        td= link_to   t('common.destroy'), master, class:"dropdown-item align-middle" , method: :delete, data: { confirm: 'Are you sure?' }
+        td= link_to   t('common.delete'), master, class:" btn btn-danger" , method: :delete

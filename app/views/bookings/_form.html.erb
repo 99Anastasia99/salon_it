@@ -1,0 +1,18 @@
+<%= form_for @booking, remote: true do |f| %>
+  <div class="form-inputs">
+    <%= f.collection_select :client_id, Client.all, :id,:name %>
+      <%= f.collection_select :offer_id, Offer.all, :id,:name %>
+    <%= f.text_field :start_time, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden' %>
+    <%# <%= f.text_field :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']] %> %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'Delete',
+                booking,
+                method: :delete,
+                class: 'btn btn-danger',
+                data: { confirm: 'Are you sure?' },
+                remote: true unless @booking.new_record? %>
+  </div>
+<% end %>

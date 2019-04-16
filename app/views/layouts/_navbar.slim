@@ -16,11 +16,9 @@ body
                 = link_to t('common.show_all_managers'), destroy_all_path(@user), class: "dropdown-item" if current_user.admin?
                 = link_to t('common.masters'), destroy_all_masters_path(@master), class: "dropdown-item"
                 = link_to t('common.offers'), offers_path, class: "dropdown-item"
+                =link_to t('common.clients'), clients_path, class: "dropdown-item"
           li.nav-item
-            a.nav-link.disabled href="#"  Disabled
-          .form-inline.my-2.my-lg-0
-            input.form-control.mr-sm-2 aria-label="Search" placeholder="Search" type="search" /
-            button.btn.btn-outline-success.my-2.my-sm-0 type="submit"  Search
+            a.nav-link.disabled href="#"  Disabledch
         div style=("margin: 5px")
           = link_to "Ru", { :locale => :ru } , class: "btn btn-outline-light btn-sm"
           = link_to "En", { :locale => :en }, class: "btn btn-outline-light btn-sm"
